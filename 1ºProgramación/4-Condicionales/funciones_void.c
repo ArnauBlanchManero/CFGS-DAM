@@ -40,7 +40,7 @@ void calcular_area_figura(){
 		if (radio < 0){
 			printf("Error en la función calcular_area_figura.\n");
 		} else {
-			resultado = radio * radio * M_PI;
+			resultado = pow(radio,2) * M_PI;
 			printf("El área del círculo con radio %.0f es %.2f\n", radio, resultado);
 		}
 	} else if (figura == 2){
@@ -49,7 +49,7 @@ void calcular_area_figura(){
 		if (lado < 0){
 			printf("Error en la función calcular_area_figura.\n");
 		} else {
-			resultado = lado * lado;
+			resultado = pow(lado,2);
 			printf("El área del cuadrado con lado %.0f es %.2f\n", lado, resultado);
 		}
 	} else {
@@ -154,37 +154,30 @@ int main(){
 	int opcion;
 	char letra;
 	printf("Selecciona una opción:\n1. Verificar si una letra es una vocal.\n2. Calcular el área de una figura (círculo o cuadrado).\n3. Calcular el promedio de 3 o 4 números.\n4. Convertir una hora en formato de 24 horas a 12 horas.\n5. Verificar si un número menor de 10 es primo.\n6. Comparar tres números.\n7. Salir\n");
+	printf("Opción: ");
 	scanf("%d", &opcion);
 	switch (opcion){ // Dependiendo del número que haya introducido el usuario voy a llamar a una función o a otra.
 		case 1:
-			printf("Opción: %d\n", opcion);
 			printf("Introduce una letra: ");
 			scanf(" %c", &letra);	
 			es_vocal(letra);
 			break;
 		case 2:
-			printf("Opción: %d\n", opcion);
 			calcular_area_figura();
 			break;
 		case 3:
-			printf("Opción: %d\n", opcion);
 			calcular_promedio();
 			break;
 		case 4:
-			printf("Opción: %d\n", opcion);
 			convertir_hora_24_a_12();
 			break;
 		case 5:
-			printf("Opción: %d\n", opcion);
 			es_primo();
 			break;
 		case 6:
-			printf("Opción: %d\n", opcion);
 			comparar_3_numeros();
 			break;
 		case 7:
-			printf("Opción: %d\n", opcion);
-		//	salir();
 			break;
 		default:
 			printf("Introduce un número entre el 1 y el 7.\n");

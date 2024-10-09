@@ -1,0 +1,8 @@
+¿SumaEnteros funciona correctamente?
+Por las pruebas que he hecho después de compilar mi código y que no me de ningún error, he visto que suma bien, resta bien, multiplica bien pero en la división no pone los decimales en las respuestas que son necesarios.
+
+¿SumaFloat funciona correctamente?
+Esta vez, sí que ha dado los resultados esperados aunque siempre ponía 6 decimales.
+
+¿SumaMixta funciona correctamente?
+No ya que opera con los números enteros y aunque el resultado sea con decimales no los ha podido calcular.

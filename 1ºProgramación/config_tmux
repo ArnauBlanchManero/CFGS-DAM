@@ -1,0 +1,21 @@
+#############################
+# Mi configuración de tmux: #
+#############################
+
+# Poder usar la rueda del ratón
+set -g mouse on
+
+# Poder abrir los comandos de tmux con dos prefijos
+set-option -g prefix C-a
+set-option -g prefix C-b
+
+# Empieza a contar los números de ventanas y paneles desde 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Permitir copiar y pegar (es necesario hacer sudo apt install xclip)
+bind C-c run "tmux save-buffer - | xclip -i -sel clip" 
+bind C-v run "tmux set-buffer $(xclip -o -sel clip); tmux paste-buffer"
+
+# Para mantener la misma ruta cuando abres una nueva ventana
+bind c new-window -c "#{pane_current_path}"

@@ -1,6 +1,10 @@
-#############################
-# Mi configuración de tmux: #
-#############################
+#################################
+# Ten en cuenta que el fichero  #
+# tiene que llamarse .tmux.conf #
+# y tiene que estar en home     #
+#################################
+
+# Mi configuración de tmux:
 
 # Poder usar la rueda del ratón
 set -g mouse on

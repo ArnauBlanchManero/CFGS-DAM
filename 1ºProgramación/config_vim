@@ -1,0 +1,22 @@
+" Para ampliar el historial
+set history=1000
+
+" Abrir los ficheros en UTF-8
+set encoding=utf-8
+
+" Esconder el warning molesto al abrir un fichero y tneer el actual sin
+" guardar
+set hidden
+
+" Ignorar las mayúsculas y minúsculas
+set ignorecase
+
+" Añade un márgen de 8 líneas cuando haces scroll
+set scrolloff=8
+
+" Activar los números relativos
+set number relativenumber
+
+" Que te muestre la línea en la que estás
+set nu rnu
+

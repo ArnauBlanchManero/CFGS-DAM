@@ -1,5 +1,5 @@
-header{
-    text-align: center;
+body{
+    justify-content: center;
 }
 td{
     text-align: center;
@@ -40,8 +40,9 @@ th{
 }
 .hora{
     font-size: large;
+    height: 120px;
 }
 .hora p{
     font-size: small;
-    padding: 5px;
+    padding: 20px 10px 20px 10px;
 }

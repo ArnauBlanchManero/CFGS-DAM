@@ -1,3 +1,11 @@
+"""""""""""""""""""""""""""""""""
+" Ten en cuenta que el fichero  "
+" tiene que llamarse .vimrc "
+" y tiene que estar en home     "
+"""""""""""""""""""""""""""""""""
+
+" Mi configuración de tmux:
+
 " Para ampliar el historial
 set history=1000
 

@@ -7,6 +7,13 @@
  * 	Autor: Arnau Blanch
  */
 //int main();
+int es_mayuscula(char letra);
+void calcular_factorial();
+int encontrar_maximo(int num1, int num2);
+double convertir_celsius_a_farenheit(double celsius);
+void intercambiar_numeros();
+double calcular_potencia(double base , int exponente);
+
 void es_vocal(char letra){
 	switch(letra){
 		case 'a':
@@ -152,30 +159,38 @@ void comparar_3_numeros(){
 
 int main(){
 	int opcion;
-	char letra;
-	printf("Selecciona una opción:\n1. Verificar si una letra es una vocal.\n2. Calcular el área de una figura (círculo o cuadrado).\n3. Calcular el promedio de 3 o 4 números.\n4. Convertir una hora en formato de 24 horas a 12 horas.\n5. Verificar si un número menor de 10 es primo.\n6. Comparar tres números.\n7. Salir\n");
+	char letra; //Para el caso 1
+	// Para mostrar el menú de inicio
+	printf("Selecciona una opción:\n
+	1. Verificar si un carácter es mayúscula.\n
+	2. Calcular el factorial de un número.\n
+	3. Encontrar el máximo de dos números.\n
+	4. Convertir de grados Celsius a Farenheit.\n
+	5. Intercambiar dos números.\n
+	6. Calcular la potencia de un número.\n
+	7. Salir\n");
 	printf("Opción: ");
 	scanf("%d", &opcion);
 	switch (opcion){ // Dependiendo del número que haya introducido el usuario voy a llamar a una función o a otra.
 		case 1:
-			printf("Introduce una letra: ");
-			scanf(" %c", &letra);	
-			es_vocal(letra);
+			printf("Introduce un carácter: ");
+			scanf(" %c", &letra);
+			int es_mayuscula(char letra);
 			break;
 		case 2:
-			calcular_area_figura();
+			void calcular_factorial();
 			break;
 		case 3:
-			calcular_promedio();
+			int encontrar_maximo(int num1, int num2);
 			break;
 		case 4:
-			convertir_hora_24_a_12();
+			double convertir_celsius_a_farenheit(double celsius);
 			break;
 		case 5:
-			es_primo();
+			void intercambiar_numeros();
 			break;
 		case 6:
-			comparar_3_numeros();
+			double calcular_potencia(double base , int exponente);
 			break;
 		case 7:
 			break;

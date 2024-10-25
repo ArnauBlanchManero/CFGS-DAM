@@ -23,3 +23,28 @@ bind C-v run "tmux set-buffer $(xclip -o -sel clip); tmux paste-buffer"
 
 # Para mantener la misma ruta cuando abres una nueva ventana
 bind c new-window -c "#{pane_current_path}"
+
+# Mostrar la barra de estado siempre
+set-option -g status on
+
+# Color de fondo de la barra de estado (puedes cambiar el color)
+set-option -g status-bg colour236
+set-option -g status-fg colour250
+
+# Color para las ventanas activas e inactivas
+set-window-option -g window-status-current-bg colour33
+set-window-option -g window-status-current-fg colour250
+set-window-option -g window-status-bg colour236
+set-window-option -g window-status-fg colour241
+
+# Agregar fecha y hora en la barra de estado
+set-option -g status-right "#{username}@#{host} %H:%M:%S %d-%m-%y"
+
+# Color del texto seleccionado en el modo de copia
+setw -g mode-style bg=colour17,fg=colour15
+
+# Resaltar resultados de búsqueda
+setw -g mode-style bg=colour94,fg=colour231
+
+# Aumentar tamaño del historial a 10,000 líneas
+set-option -g history-limit 10000

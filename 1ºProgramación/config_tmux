@@ -48,3 +48,6 @@ setw -g mode-style bg=colour94,fg=colour231
 
 # Aumentar tamaño del historial a 10,000 líneas
 set-option -g history-limit 10000
+
+# Indicador de memoria y CPU en la barra de estado derecha
+set -g status-right "#(free -h | grep Mem | awk '{print $3 \"/\" $2}') | CPU: #(top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\([0-9.]*\)%* id.*/100 - \1/' | awk '{print $1\"%\"}') | %H:%M"

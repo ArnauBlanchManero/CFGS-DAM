@@ -7,31 +7,44 @@
     </head>
     <body>
         <!-- Esto es un comentario -->
-        <h1>Bienvenido a mi página</h1>
-        <h2>Subtítulo</h2>
-        <h3>SubSubtítulo</h3>
-        <h4>SubSubSubtítulo</h4>
-        <h5>SubSubSubSubtítulo</h5>
-        <h6>SubSubSubSubSubtítulo</h6>
-        <h2>Etiquetas en los párrafos</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur <b> adipisicing</b> elit. Libero <em>consequuntur</em> vero illo dolorum eum esse itaque <u>dolores</u> consectetur deserunt. 
-            Explicabo vitae <mark>officia</mark>  dolorum dicta eveniet? <s>Voluptatibus</s> laudantium repellat quasi.
-        </p>
-        <p>
-            <cite>Título de un libro</cite>
-            <q>Esto es una cita</q>
-        </p>
-        <p>
-            El texo a continuación es <small>más pequeño</small>
-        </p>
-        <p>
-            La asignatura <dfn>lenguaje de marcas</dfn> lo escribo como <abbr>LM</abbr>.
-        </p>
+	<header>
+        	<h1>Bienvenido a mi página</h1>
+        	<h2>Subtítulo</h2>
+        	<h3>SubSubtítulo</h3>
+        	<h4>SubSubSubtítulo</h4>
+        	<h5>SubSubSubSubtítulo</h5>
+        	<h6>SubSubSubSubSubtítulo</h6>
+        	<h2>Etiquetas en los párrafos</h2>
+	</header>
+	<section>
+		<h2>Índice</h2>
+		<a href="https://www.google.com/logos/2016/halloween16/halloween16.html?hl=es" target="_blanc">Gato mago</a>
+		<a href="#texto">Texto</a>
+		<a href="#lista">Listas</a>
+		<a href="#imagen">Imágenes</a>
+	</section>
+	<article>
+	        <p id="texto">
+	            Lorem ipsum dolor sit amet consectetur <b> adipisicing</b> elit. Libero <em>consequuntur</em> vero illo dolorum eum esse itaque <u>dolores</u> consectetur deserunt. 
+	            Explicabo vitae <mark>officia</mark>  dolorum dicta eveniet? <s>Voluptatibus</s> laudantium repellat quasi.
+	        </p>
+	        <p>
+	            <cite>Título de un libro</cite>
+	            <q>Esto es una cita</q>
+	        </p>
+	        <p>
+	            El texo a continuación es <small>más pequeño</small>
+	        </p>
+	        <p>
+	            La asignatura <dfn>lenguaje de marcas</dfn> lo escribo como <abbr>LM</abbr>.
+	        </p>
+	</article>
+	<section>
         <h3>Subíndice y superíndice</h3>
         <p>superíndice 2<sup>2</sup></p>
         <p>Subíndice x<sub>n</sub></p>
-        <h2>Listas</h2>
+	</section>
+        <h2 id="lista">Listas</h2>
         <h3>Listas no numeradas</h3>
         <ul>
             <li>Elemento 1</li>
@@ -86,12 +99,73 @@
                 </ol>
             </li>
         </ul>
-        <h2>Imágenes</h2>
-        <h3>Ruta absoluta</h3>
-        <p>C:/Users/Dam/CodigoVS/Primera_práctia_HTML/Imágenes</p>
-        <img src="C:/Users/Dam/CodigoVS/Primera_práctia_HTML/Imágenes/gato_mago.jpg"> 
-        <h3>Ruta relativa</h3>
-        <p>../Imágenes/gato_mago.jpg</p>
-        <img src="../Imágenes/gato_mago.jpg">
+	<h2>Multimedia</h2>
+	<picture>
+		<source media="(width < 900 px)" scrset="https://imgv3.fotor.com/images/homepage-feature-card/PNG-de-coches.jpg">
+		<img src="https://cdn.pixabay.com/photo/2022/03/06/05/42/car-7050893_1280.jpg" alt="imagen">
+	</picture>
+	<video src="../multimedia/salmon.mp4#t=60" width="1280px" height="720px" controls></video>
+	<video src="../multimedia/short_salmon.mp4" autoplay loop controls></video>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/IUZxVlQrFus?si=q_CSVW5L4ntblolE" title="Salmon de La Capital" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>	
+	<audio src="../multimedia/Halloween.mp3" controls preload="multimedia"></audio>
+	<section>
+		<h2 id="tabla">Tablas</h2>
+		<table border="1px">
+		<thead>
+			<tr>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+				<th colspan="2">D</th>
+				<th>E</th>
+			<tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>F</td>
+				<td>G</td>
+				<td>H</td>
+				<td rowspan="3">I</td>
+			<tr>
+			<tr>
+				<td colspan="3">J</td>
+				<td>K</td>
+				<td>L</td>
+			<tr>
+			<tr>
+				<td>M</td>
+				<td colspan="2">N</td>
+				<td>Ñ</td>
+				<td>O</td>
+			<tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>P</td>
+				<td>Q</td>
+				<td>R</td>
+				<td>S</td>
+				<td>T</td>
+				<td>U</td>
+			<tr>
+		</tfoot>
+		<colgroup>Abecedario</colgroup>
+		</table>
+	</section>
+        <footer>
+		<h2 id="imagen">Imágenes</h2>
+        	<h3>Ruta absoluta</h3>
+        	<p>C:/Users/Dam/Primera_práctia_HTML/multimedia/gato_mago.jpg</p>
+        	<img src="C:/Users/Dam/Primera_práctia_HTML/multimedia/gato_mago.jpg" alt="Texto alternativo: es una imágen de un gato mago"> 
+        	<h3>Ruta relativa</h3>
+        	<p>../multimedia/gato_mago.jpg</p>
+        	<img src="../multimedia/gato_mago.jpg" width="100px" height="100px">
+	</footer>
+	<!-- 
+	      contenedores: 
+		span y div
+		header y footer
+		article y section
+	-->
     </body>
 </html>

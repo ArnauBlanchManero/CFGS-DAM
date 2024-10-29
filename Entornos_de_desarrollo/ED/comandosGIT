@@ -9,4 +9,7 @@ git checkout <rama>: Cambia a una rama existente.
 git merge <rama>: Fusiona una rama en la rama actual.
 git diff <rama1> <rama2>: Muestra las diferencias entre las dos ramas.
 
-
+Comandos de Git remoto:
+git fetch <nombre>: Descarga las últimas actualizaciones del repositorio remoto sin integrarlas.
+git pull <nombre>: Descarga las últimas actualizaciones del repositorio remoto e integra los cambios en la rama local.
+git push <nombre> <rama>: Envía los cambios locales al repositorio remoto.

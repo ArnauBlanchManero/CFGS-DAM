@@ -1,0 +1,12 @@
+Comandos de Git local:
+git init: Inicializa un nuevo repositorio Git en un directorio existente.
+git add <archivo>: Agrega un archivo a la siguiente confirmación (commit).
+git commit -m "mensaje": Crea una nueva confirmación con los cambios agregados.
+git status: Muestra el estado actual del repositorio (cambios sin confirmar, ramas, etc.).
+git log: Muestra el historial de confirmaciones.
+git branch: Muestra las ramas existentes y crea nuevas.
+git checkout <rama>: Cambia a una rama existente.
+git merge <rama>: Fusiona una rama en la rama actual.
+git diff <rama1> <rama2>: Muestra las diferencias entre las dos ramas.
+
+

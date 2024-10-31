@@ -1,0 +1,48 @@
+header{
+    text-align: center;
+}
+td{
+    text-align: center;
+    border: 1px black solid;
+}
+table{
+    border: 3px black solid;
+    border-collapse: collapse;
+}
+th{
+    padding: 10px;
+    border: 1px black solid;
+}
+.clase{
+    text-align: left;
+}
+.profe{
+    text-align: right;
+}
+.color{
+    width: 30px;
+    border: 1px black solid;
+}
+.asignatura{
+    width: 150px;
+}
+.JM{
+    background-color: yellow;
+}
+.BM{
+    background-color: lightblue;
+}
+.VJ{
+    background-color: blue;
+}
+.NE{
+    background-color: purple;
+}
+.hora{
+    font-size: large;
+    height: 120px;
+}
+.hora p{
+    font-size: small;
+    padding: 20px 10px 20px 10px;
+}

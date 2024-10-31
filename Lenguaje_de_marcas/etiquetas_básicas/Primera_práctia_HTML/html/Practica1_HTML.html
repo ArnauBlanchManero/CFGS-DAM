@@ -152,7 +152,61 @@
 		<colgroup>Abecedario</colgroup>
 		</table>
 	</section>
-        <footer>
+	<section>
+		<h2>Formularios</h2>
+		<form name="formulario1" method="get" action="fichero.php">
+			<p>Nombre: <input type="text" name="nombre" required></p>
+			<p>Contraseña: <input type="password" name="contra" required></p>
+			<p>Teléfono:<input type="tel" name="telefono"></p>
+			<p>Correo electrónico:<input type="email" name="correo"></p>
+			<p>Fecha de nacimiento: <input type="date" name="fecha_nac"></p>
+			<p>Mes: <input type="month" name="mes"></p>
+			<p>Semana: <input type="week" name="semana"></p>
+			<p>Hora: <input type="time" name="hora"></p>
+			<p>Fecha y Hora: <input type="datetime-local" name="feha_hora"></p>
+			<p>Edad: <input type="number" name="edad" min="0" step="10"></p>
+			<p>Volumen: <input type="range" name="edad" min="0" max="100"></p>
+			<p>Página web: <input type="url" name="pagina" placeholder="salesianosdosa.com"></p>
+			<h4>Opciones múltiples</h4>
+				<p><input type="checkbox" name="opcion1" value="piscina">Piscina</p>
+				<p><input type="checkbox" name="opcion2" value="campo" checked>Campo</p>
+				<p><input type="checkbox" name="opcion3" value="playa">playa</p>
+			<h4>Opciones únicas</h4>
+				<p><input type="radio" name="gustos" value="verano" checked>Verano</p>
+				<p><input type="radio" name="gustos" value="invierno">Invierno</p>
+			<h4>Opciones desplegables</h4>
+			<select>
+				<option value="nada" hidden selected></option>
+				<optgroup label="Frutas">
+					<option value="fresa">Fresa</option>
+					<option value="platano">Plátano</option>
+					<option value="manzana">Manzana</option>
+					<option value="sandia">Sandía</option>
+				</optgroup>
+				<optgroup label="Verduras">
+					<option value="zanahoria">Zanahoria</option>
+					<option value="pepino">Pepino</option>
+					<option value="lechuga">Lechuga</option>
+				</optgroup>
+			</select>
+			<h4>Opciones desplegables múltiples</h4>
+			<select multiple>
+				<option value="nada" hidden selected></option>
+				<option value="rojo">Rojo</option>
+				<option value="negro">Negro</option>
+				<option value="verde">Verde</option>
+				<option value="rosa">Rosa</option>
+			</select>
+			<p><input type="color" value="#63D4BA"></p>
+			<textarea name="texto" placeholder="Escribe texto aquí..." cols="30" rows="10"></textarea>
+			<p><meter min="0" max="100" value="25"></meter></p>
+			<p><progress min="0" max="100"></progress></p>
+			<p><input type="submit" name="enviar" value="Aceptar"></p>
+			<p><input type="reset" name="resetear" value="Borrar"></p>
+		</form>
+			<button>Un simple botón</button>
+	</section>
+    <footer>
 		<h2 id="imagen">Imágenes</h2>
         	<h3>Ruta absoluta</h3>
         	<p>C:/Users/Dam/Primera_práctia_HTML/multimedia/gato_mago.jpg</p>

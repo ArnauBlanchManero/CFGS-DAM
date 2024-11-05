@@ -1,0 +1,40 @@
+<!-- Documento escrito por Arnau Blanch Manero -->
+<html lang="es">
+	<head>
+		<title>Formularios de todo tipo</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Formulario de Registro Básico</h1>
+		<form action="fichero.php" method="get">
+			<p>Nombre: <input type="text" name="nombre"></p>
+			<p>Apellido: <input type="text" name="apellido"></p>
+			<p>Correo electrónico: <input type="email" name="correo"></p>
+			<p>Contraseña: <input type="password" name="contra1"></p>
+			<p>Confirma contraseña: <input type="password" name="contra2"></p>
+			<input type="submit" name="envio" value="Enviar">
+		</form>
+		<h1>Formulario de Contacto</h1>
+		<form action="fichero.php" method="get">
+			<p>Nombre: <input type="text" name="nombre"></p>
+			<p>Correo electrónico: <input type="email" name="correo"></p>
+			<p>Asunto: <input type="text" name="asunto"></p>
+			<textarea name="mensaje" placeholder="Escribe el cuerpo del correo"></textarea><br><br>
+			<input type="submit" name="envio" value="Enviar">
+		</form>
+		<h1>Encuesta Simple</h1>
+		<form action="fichero.php" method="get">
+			<label for="color">¿Cuál es tu color favorito?</label>
+			<p><input type="radio" name="color" value="rojo">Rojo</p>
+			<p><input type="radio" name="color" value="verde">Verde</p>
+			<p><input type="radio" name="color" value="azul">Azul</p>
+			<p><input type="radio" name="color" value="amarillo">Amarillo</p>
+			<label for="fruta">¿Qué frutas te gustan?</label>
+			<p><input type="checkbox" name="fruta1" value="manzana">Manzana</p>
+			<p><input type="checkbox" name="fruta2" value="platano">Plátano</p>
+			<p><input type="checkbox" name="fruta3" value="naranja">Naranja</p>
+			<p><input type="checkbox" name="fruta4" value="uva">Uva</p>
+			<input type="submit" name="envio" value="Enviar">
+		</form>
+	</body>
+</html>

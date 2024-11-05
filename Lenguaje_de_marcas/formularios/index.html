@@ -87,8 +87,43 @@
 				<p><input type="checkbox" name="asignatura" value="asignaturamatematicas">Matemáticas</p>
 				<p>Hora <input type="time" name="hora"></p>
 				<input type="file" name="fichero" value="Fichero2"><br>
-				<textarea rows="8" cols="49" placeholder="Inserte aqui el texto"></textarea>
+				<textarea rows="8" cols="49" placeholder="Inserte aqui el texto"></textarea><br>
+				<input type="submit" name="envio" value="Enviar">
 			</fieldset>
+		</form>
+		<form action="fichero.html" method="get">
+			<fieldset>
+			<legend>Formulario de opciones</legend>
+				<label for="instituto">Instituto</label>
+				<input type="text" name="instituto">
+				<label for="estudios">Estudios elegidos</label>
+				<input type="text" name="estudios">
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre">
+				<p><input type="color" value="#000000"></p>
+				<textarea rows="5" cols="47" placeholder="Utilice este recuadro por favor"></textarea><br>
+				<p><input type="radio" name="red" value="red2g">2G</p>
+				<p><input type="radio" name="red" value="red3g">3G</p>
+				<p><input type="radio" name="red" value="red4g">4G</p>
+				<p>Elija una fecha:<input type="date" name="fecha"></p>
+			</fieldset>
+			<fieldset>
+			<legend>Por favor, complete estas opciones</legend>
+				<p>Elija un fichero:<input type="file" name="fichero" value="fichero"></p>
+				<select name="conector">
+					<option value="usb">USB</option>
+					<option value="paralelo">Paralelo</option>
+					<option value="ps2">PS2</option>
+				</select>
+				<input type="radio" name="sistema" value="sistemawindows">
+				<label for="sistema">Windows</label>
+				<input type="radio" name="sistema" value="sistemamac">
+				<label for="sistema">Mac</label>
+				<input type="radio" name="sistema" value="sistemalinux">
+				<label for="sistema">Linux</label>
+				<p>Elija una fecha:<input type="date" name="fecha"></p>
+			</fieldset>
+			<input type="submit" name="envio" value="Enviar">
 		</form>
 	</body>
 </html>

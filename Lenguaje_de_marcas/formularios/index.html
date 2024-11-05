@@ -44,5 +44,20 @@
 			<p>Hora de reserva: <input type="time" name="hora_reserva"></p>
 			<input type="submit" name="envio" value="Enviar">
 		</form>
+		<h1>Formulario de Feedback</h1>
+		<form action="fichero.php" method="get">
+			<p>Nombre: <input type="text" name="nombre"></p>
+			<p>Correo electrónico: <input type="email" name="correo"></p>
+			<p>Calificación: <input type="number" name="calificacion" min="1" max="5" value="5"></p>
+			<textarea name="comentarios" placeholder="Comentarios"></textarea><br><br>
+			<input type="submit" name="envio" value="Enviar">
+		</form>
+		<h1>Formulario de validación</h1>
+		<form action="fichero.php" method="get">
+			<p>Nombre: <input type="text" name="nombre"></p>
+			<p>Correo electrónico: <input type="email" name="correo"></p>
+			<p><input type="checkbox" name="terminos_condiciones" required> Acepto los términos y condiciones</p>
+			<input type="submit" name="envio" value="Enviar">
+		</form>
 	</body>
 </html>

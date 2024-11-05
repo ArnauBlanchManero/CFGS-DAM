@@ -5,8 +5,8 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<h1>Formulario de Registro Básico</h1>
-		<form action="fichero.php" method="get">
+		<h1>1. Formulario de Registro Básico</h1>
+		<form action="fichero.html" method="get">
 			<p>Nombre: <input type="text" name="nombre"></p>
 			<p>Apellido: <input type="text" name="apellido"></p>
 			<p>Correo electrónico: <input type="email" name="correo"></p>
@@ -14,16 +14,16 @@
 			<p>Confirma contraseña: <input type="password" name="contra2"></p>
 			<input type="submit" name="envio" value="Enviar">
 		</form>
-		<h1>Formulario de Contacto</h1>
-		<form action="fichero.php" method="get">
+		<h1>2. Formulario de Contacto</h1>
+		<form action="fichero.html" method="get">
 			<p>Nombre: <input type="text" name="nombre"></p>
 			<p>Correo electrónico: <input type="email" name="correo"></p>
 			<p>Asunto: <input type="text" name="asunto"></p>
 			<textarea name="mensaje" placeholder="Escribe el mensaje del correo"></textarea><br><br>
 			<input type="submit" name="envio" value="Enviar">
 		</form>
-		<h1>Encuesta Simple</h1>
-		<form action="fichero.php" method="get">
+		<h1>3. Encuesta Simple</h1>
+		<form action="fichero.html" method="get">
 			<label for="color">¿Cuál es tu color favorito?</label>
 			<p><input type="radio" name="color" value="rojo">Rojo</p>
 			<p><input type="radio" name="color" value="verde">Verde</p>
@@ -36,28 +36,59 @@
 			<p><input type="checkbox" name="fruta4" value="uva">Uva</p>
 			<input type="submit" name="envio" value="Enviar">
 		</form>
-		<h1>Formulario de reserva</h1>
-		<form action="fichero.php" method="get">
+		<h1>4. Formulario de reserva</h1>
+		<form action="fichero.html" method="get">
 			<p>Nombre: <input type="text" name="nombre"></p>
 			<p>Nº de personas: <input type="number" name="n_personas"></p>
 			<p>Fecha de reserva: <input type="date" name="dia_reserva"></p>
 			<p>Hora de reserva: <input type="time" name="hora_reserva"></p>
 			<input type="submit" name="envio" value="Enviar">
 		</form>
-		<h1>Formulario de Feedback</h1>
-		<form action="fichero.php" method="get">
+		<h1>5. Formulario de Feedback</h1>
+		<form action="fichero.html" method="get">
 			<p>Nombre: <input type="text" name="nombre"></p>
 			<p>Correo electrónico: <input type="email" name="correo"></p>
 			<p>Calificación: <input type="number" name="calificacion" min="1" max="5" value="5"></p>
 			<textarea name="comentarios" placeholder="Comentarios"></textarea><br><br>
 			<input type="submit" name="envio" value="Enviar">
 		</form>
-		<h1>Formulario de validación</h1>
-		<form action="fichero.php" method="get">
+		<h1>6. Formulario de validación</h1>
+		<form action="fichero.html" method="get">
 			<p>Nombre: <input type="text" name="nombre"></p>
 			<p>Correo electrónico: <input type="email" name="correo"></p>
 			<p><input type="checkbox" name="terminos_condiciones" required> Acepto los términos y condiciones</p>
 			<input type="submit" name="envio" value="Enviar">
+		</form>
+		<h1>7. Formularios</h1>
+		<form action="fichero.html" method="get">
+			<fieldset>
+			<legend>Preferencias</legend>
+				<select multiple name="velocidad">
+					<option value="100_mbits">100 Mbits</option>
+					<option value="1000_mbits">1000 Mbits</option>
+				</select>
+				<p>DNI<input type="text" name="dni"></p>
+				<p>Nombre<input type="text" name="nombre"></p>
+				<p>Apellidos<input type="text" name="apellidos"></p>
+				<p>Email<input type="text" name="correo"></p>
+				<p><input type="color" value="#000000"></p>
+				<textarea rows="6" cols="49" placeholder="Por favor, esctiba aquí"></textarea>
+				<p><input type="checkbox" name="procesador" value="procesadoramd">AMD</p>
+				<p><input type="checkbox" name="procesador" value="procesadorintel_i5">Intel i5</p>
+				<p><input type="checkbox" name="procesador" value="procesadorintel_i7">Intel i7</p>
+				<p>Elija una hora:<input type="time" name="hora_reserva"></p>
+				<p><input type="radio" name="red" value="red2g">2G</p>
+				<p><input type="radio" name="red" value="red3g">3G</p>
+				<p><input type="radio" name="red" value="red4g">4G</p>
+				<input type="file" name="fichero" value="Fichero1"><br>
+				<p><input type="checkbox" name="asignatura" value="asignaturahistoria">Historia</p>
+				<p><input type="checkbox" name="asignatura" value="asignaturageografía">Geografía</p>
+				<p><input type="checkbox" name="asignatura" value="asignaturalengua">Lengua</p>
+				<p><input type="checkbox" name="asignatura" value="asignaturamatematicas">Matemáticas</p>
+				<p>Hora <input type="time" name="hora"></p>
+				<input type="file" name="fichero" value="Fichero2"><br>
+				<textarea rows="8" cols="49" placeholder="Inserte aqui el texto"></textarea>
+			</fieldset>
 		</form>
 	</body>
 </html>

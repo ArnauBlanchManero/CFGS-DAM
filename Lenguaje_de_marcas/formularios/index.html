@@ -245,7 +245,18 @@
 				<input type="checkbox" name="asignatura" value="asignaturahistoria">
 				<label for="asignatura">Historia</label>
 				<input type="checkbox" name="asignatura" value="asignaturageografia">
-				<label for="asignatura">Geografía</label>
+				<label for="asignatura">Geografía</label> <br>
+				<select multiple name="medio_transporte">
+					<option value="automovil">Automóvil</option>
+					<option value="moto">Moto</option>
+					<option value="autobus">Autobús</option>
+				</select> <br>
+				<textarea rows="7" cols="60" placeholder="Utilice este recuadro por favor" name="texto"></textarea>
+				<p><input type="radio" name="edition" value="editornotepad">Notepad</p>
+				<p><input type="radio" name="edition" value="editoremacs">Emacs</p>
+				<p><input type="radio" name="edition" value="editorotro">Otro</p>
+				<label for="hora">Elija una hora:</label>
+				<input type="time" name="hora"> <br>
 			</fieldset>
 			<input type="submit" name="envio" value="Enviar">
 		</form>

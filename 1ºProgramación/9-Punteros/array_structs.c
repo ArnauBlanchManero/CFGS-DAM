@@ -48,6 +48,14 @@ void inicializar(Estudiante * nuevo_estudiante, char * nombre, int edad, float n
 	strcpy(nuevo_estudiante -> nombre, nombre);
 }
 
+// No necesito que devuelva nada.
+void cumpleanios(Estudiante * cumpleaniero){ // Tiene que recibir un puntero a estudiante porque va a modificar la variable que está en la variable y tiene que perdurar.
+	(*cumpleaniero).edad ++;
+	// Sería mejor poner cumpleanioero->edad++;
+}
+
+// Crea una funcion que cree una cadna de texto con la informaicon del estudiante. 
+// Puedes creando una funcion que imprima por mantalla la info de un estudiante.
 int main(){
 	Estudiante listado[MAX_ESTUDIANTES]; // Aquí se reserva la memoria para los estudiantes.
 	
@@ -73,5 +81,8 @@ int main(){
 		inicializar(&listado[i], nombre, edad, nota);
 		//inicializar(listado + i, nombre, edad, nota);
 	}
+	printf("Edad antigua de %s: %d\n", listado[0].nombre, listado[0].edad);
+	cumpleanios(listado); // Aquí le estoy pasando una dirección de memoria, si quisiera especificar de qué alumno debería poner &listado[0] 
+	printf("Nueva edad: %d\n", listado[0].edad);
 	return EXIT_SUCCESS;
 }

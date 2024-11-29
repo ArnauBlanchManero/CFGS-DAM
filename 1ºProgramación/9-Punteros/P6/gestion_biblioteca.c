@@ -1,25 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
  * 	Author: Arnau Blanch
  */
 
-typedef enum {
-	FICCION,
-	NON_FICTION,
-} Category;
+// Defines //
+#define BOOKS_QUANTITY 40
 
+// Las categorías en forma de enum //
+typedef enum {
+	FICTION,	// 1
+	NON_FICTION,// 2
+	POETRY,		// 3
+	THEATER,	// 4
+	ESSAY		// 5
+} Category;
+// Un struct de Book //
 typedef struct{
 	int id;
 	char title[80];
 	char author[50];
 	float price;
 	Category gender;
+	int quantity;
 } Book;
 
+void show_book(Book * one_book){ //Sirve para mostrar toda la info del libro al que apunte la dirección de memoria que le pasan.
+	printf("ID: %d ", one_book->id);
+	printf("Título: %s ", one_book->title);
+	printf("Autor: %s ", one_book->author);
+	printf("Precio: %.2f ", one_book->price);
+	// Aquí puedo hacer un switch para escribir cada categoría.
+	printf("Categoría: %d ", one_book->gender);
+	printf("Cantidad: %d\n", one_book->quantity);
+}
+
+void show_book_by_category(Book const * first_book, int category_number){
+	for (int i = 0; i < BOOKS_QUANTITY; ++i){
+		first_book++;
+		if (category_number == first_book->gender){
+			/* code */
+		}
+	}
+}
+
+void show_n_books(Book * n_books, int max){ // Recibe la dirección de memoria en la que empieza el bucle y el número de vueltas que tiene que dar. 
+	for (int i = 0; i < max; ++i){
+		show_book(n_books+i); // Muestra el libro correspondiente
+	}
+}
+
 int main(){
-	Book books[40] = {
+
+// Variables //
+	int identification;
+	int search_category;
+
+	Book books[BOOKS_QUANTITY] = {
         {1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10},
         {2, "1984", "George Orwell", 12.49, FICTION, 5},
         {3, "The Great Gatsby", "F. Scott Fitzgerald", 10.99, FICTION, 8},
@@ -61,6 +100,24 @@ int main(){
         {39, "The Republic", "Plato", 16.00, ESSAY, 6},
         {40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10}
     }; 
+
+// Muestro todo el catálogo //
+    printf("Voy a mostrar todos los libros:\n");
+    show_n_books(&books[0], BOOKS_QUANTITY); // Paso la dirección de memoria en la que tiene que empezar y la cantidad que tiene que imprimir.
+
+// Muestro la info de un libro a partir de un ID //
+    printf("Dime un ID y yo te mostraré la información de ese libro: ");
+    scanf("%d", &identification);
+    if(identification > BOOKS_QUANTITY || identification <= 0){
+    	printf("ERROR, no existe ese id\n"); // Si no encuentro el id, muestro un mensaje de error.
+    } else {
+    	show_book(&books[identification-1]);
+    }
+
+// Muestro todos los libros que pertenecen a una categoría //
+    printf("Dime una categoría (1, 2, 3, 4 o 5) y yo te mostraré todos sus libros: ");
+    scanf("%d", &search_category);
+    show_book_by_category(&books[0], search_category);
 
 	return EXIT_SUCCESS;
 }

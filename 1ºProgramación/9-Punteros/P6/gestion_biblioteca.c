@@ -42,7 +42,7 @@ void show_book_by_category(Book const * first_book){
     printf("Dime una categoría (1, 2, 3, 4 o 5) y yo te mostraré todos sus libros: ");
     scanf("%d", &category_number);
 	for (int i = 0; i < BOOKS_QUANTITY; ++i){
-		if (category_number-1 == first_book->gender){
+		if (category_number-1 == first_book->gender){ // Pongo -1 porque yo pido al usuario números del 1 al 5 en vez del 0 al 4.
 			show_book(first_book);
 		}
 		first_book++;
@@ -59,9 +59,10 @@ void show_book_by_id(Book const * idbook){
     } else {
     	for (int i = 0; i < BOOKS_QUANTITY; ++i){
 	    	if(identification == idbook->id){
-	    		show_book(idbook);
+	    		show_book(idbook); // Cuando encuentro el ID lo imprimo y acabo el bucle.
+	    		break;
 	    	}
-	    	idbook++;
+	    	idbook++; // Tengo que ir aumentando la dirección de memoria para buscar en todo el array.
 	    }
     }
 }

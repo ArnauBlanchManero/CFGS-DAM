@@ -113,12 +113,12 @@ void modify_stock(const Book * book_stock){
 	printf("Vamos a modificar el stock de los libros, escribe el ID que quieras: ");
 	scanf("%d", &another_id);
 	book_to_change = search_one_id(book_stock, another_id);
-	if(another_id <= BOOKS_QUANTITY && another_id > 0){
+	if(another_id <= BOOKS_QUANTITY && another_id > 0){ // Compruebo que el ID exista para modificar su stock.
 		printf("Ésta es la información inicial: \n");
 		show_book(book_to_change);
 		printf("Cuánto quieres añadir a la cantidad? ");
 		scanf("%d", &stock_quantity);
-		book_to_change->quantity += stock_quantity;
+		book_to_change->quantity += stock_quantity; // Añado la cantidad que quiera el usuario sobre lo que ya había.
 		printf("Ésta es la información final: \n");
 		show_book(book_to_change);
 	}
@@ -131,7 +131,7 @@ void show_book_by_id(Book const * idbook){
 	printf("Dime un ID y yo te mostraré la información de ese libro: ");
     scanf("%d", &identification);
     
-    the_id = search_one_id(idbook, identification);
+    the_id = search_one_id(idbook, identification); // Me devuelve la dirección de memoria del libro que tiene el ID que le he pasado.
     if(identification <= BOOKS_QUANTITY && identification > 0){
     	show_book(the_id);
     }

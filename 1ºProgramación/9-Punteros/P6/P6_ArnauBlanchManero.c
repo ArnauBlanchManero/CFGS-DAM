@@ -55,7 +55,7 @@ void show_book(const Book const * one_book){ //Sirve para mostrar toda la inform
 	printf("\tCantidad: %d\n", one_book->quantity);
 }
 
-void show_book_by_author(Book const * author_book){
+void show_book_by_author(Book const * author_book){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las direcciones de memoria pero no queiro modificar su contenido.
 	char search_author[MAX_AUTHOR_LENGHT];
 	int author_length;
 	int string_length;
@@ -69,40 +69,40 @@ void show_book_by_author(Book const * author_book){
 		if(strlen(author_book->author) <= author_length){ // Esta comparación sirve para comprobar que el autor que estoy buscando tiene una longitud mayor al autor del libro que voy a comparar.
 			string_length = 0;
 		} else {
-			string_length = strlen(author_book->author) - author_length; // Esta resta sirve para comparar hasta la longitud del libro menos la longitud del libro
+			string_length = strlen(author_book->author) - author_length; // Esta resta sirve para comparar hasta la longitud del libro que estoy comparando menos la longitud del libro que quiero buscar. Si no lo hiciera estaría accediendo a los siguientes caracteres que se salen del libro que quiero buscar.
 		}
-		for (int j = 0; j <= string_length; ++j){
-			// printf("i: %d j: %d\n", i,j);
+		for (int j = 0; j <= string_length; ++j){ // Hay que poner <= porque si no, no llega a la comparación que debe.
+			// printf("i: %d j: %d\n", i,j); // Esto lo he puesto para depurar errores.
 			if (strncmp(search_author, author_book->author+j, author_length) == 0){ // search_author tiene más cosas después del \0 así que tengo que comparar hasta ese caracter (uso strncmp) pero la longitud del autor varía así que uso la variable author_length
 				show_book(author_book);
 			}
 		}
-		author_book++;
+		author_book++; // Paso al siguiente libro.
 	}
 }
 
-void show_book_by_category(Book const * first_book){
+void show_book_by_category(Book const * first_book){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las direcciones de memoria pero no queiro modificar su contenido.
 	int category_number;
     printf("Dime una categoría (1, 2, 3, 4 o 5) y yo te mostraré todos sus libros: ");
     scanf("%d", &category_number);
 	for (int i = 0; i < BOOKS_QUANTITY; ++i){
-		if (category_number-1 == first_book->gender){ // Pongo -1 porque yo pido al usuario números del 1 al 5 en vez del 0 al 4.
+		if (category_number-1 == first_book->gender){ // Pongo -1 porque yo pido al usuario números del 1 al 5 en vez del 0 al 4. Pongo -> porque first_book es una dirección de memoria.
 			show_book(first_book);
 		}
-		first_book++;
+		first_book++; // Paso a buscar al siguiente libro.
 	}
 }
 
 Book * search_one_id(Book const * one_id, int id_number){ // Es una función Book * porque devuelvo un puntero a Book.
-	if(id_number > BOOKS_QUANTITY || id_number <= 0){
-    	printf("ERROR, no existe ese id\n"); // Si no encuentro el id, muestro un mensaje de error.
+	if(id_number > BOOKS_QUANTITY || id_number <= 0){ // Si no encuentro el id, muestro un mensaje de error.
+    	printf("ERROR, no existe ese id\n");
     } else {
     	for (int i = 0; i < BOOKS_QUANTITY; ++i){
-		    	if(id_number == one_id->id){
+		    	if(id_number == one_id->id){ // También podría poner one_id[i].id si no incrementara después de cada vuelta.
 		    		return one_id; // Cuando encuentro el ID lo devuelvo y acabo el bucle.
-		    		break;
+		    		break; // Como sólo hay un ID salgo del bucle.
 		    	}
-		    	one_id++; // Tengo que ir aumentando la dirección de memoria para buscar en todo el array.
+		    	one_id++; // Tengo que ir aumentando la dirección de memoria para buscar en todo el array y no apuntar simepre al primer elemento.
 		    }
     }
 }

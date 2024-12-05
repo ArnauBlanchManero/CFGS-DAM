@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Examen de 2022</title>
+    </head>
+    <body>
+        <div class="cabecera">
+            <h1>CABECERA (h1)</h1>
+            <p>Los títulos h1 son de la familia de Arial y son del tamaño 28pt y negrita, 
+                el color de estos títulos será azul</p>
+            <p>Esta cabecera es de color amarillo y las cajas de abajo de esta caja están alineadas con flex. 
+                Esta caja está en la cabecera pero solo contiene el texto. 
+                Las cajas contenedoras a las que afecta flex son naranjas, 
+                la caja que las contiene rosa, las cajas que tiene la propiedad que las hace que estén alineadas y hay un hueco (gap) entre ellas de 10pt, 
+                además de tener un padding de 10pt y los párrafos son de la familia de Century Gothic y de tamaño 11pt.</p>
+        </div>
+        <div class="horizontal">
+            <div class="naranja">
+                <p>Las listas y los pñarrafos de los divs que estén contenidos en la cabecera serán de la familia Arial como h1 pero de tamaño 12.</p>
+                <p>Elementos que hay que tener en cuenta</p>
+                <ul>
+                    <li>Cerrar bien los divs</li>
+                    <li>Tener cuidad con la posición</li>
+                </ul>
+            </div>
+            <div class="naranja">
+                <p>Estos textos son de ejemplo, recuerda que no se pueden poner la etiqueta br a no ser que la necesites para alggo. 
+                    Y que aunque sean texto de ejemplo debes ponerlo tipo párrafo.</p>
+            </div>
+            <div class="naranja">
+                <p>Estos textos son de ejemplo, recuerda que no se pueden poner la etiqueta br a no ser que la necesites para alggo. 
+                    Y que aunque sean texto de ejemplo debes ponerlo tipo párrafo.</p>
+            </div>
+        </div>
+        <div class="parte2">
+            <div class="morado">
+                <h2>GUIA PARA ESTA PARTE (h2)</h2>
+                <p>h2 es del color blanco, lo demás lo dejaremos por defecto</p>
+                <p>En esta caja hay tres cajas que se van a alinear con grid, la cuadrícula a rear es de 4x4, 
+                    la primera caja ocupa toda la fila de arriba, Haced las cajas con fracciones, por ejemplo, con una fracción. 
+                    La caja central es verde yu las distintas cajas son moradas, 
+                    Hay una separación entre filas y columnas que permite ver la cuadrícula ya que el fondo de la caja es verde y las otras cajas son moradas, 
+                    Añadimos padding 10pt y justificamos el texto.</p>
+            </div>
+            <div class="morado">
+                <form action="index.html" method="post">
+                    <p>
+                        <label for="nombre">Tu nombre: </label>
+                        <input type="text" name="nombre">
+                    </p>
+                    <p>
+                        <label for="email">Tu dirección de correo: </label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>Selecciona como te ha salido</p>
+                    <p><input type="radio" name="opcion"> Bien</p>
+                    <p><input type="radio" name="opcion"> Mal</p>
+                    <p><input type="radio" name="opcion"> Regular</p>
+                    <p>Las opciones del desplegable son JavaScript, PHP, Java, C#, C++</p>
+                    <p>Lenguaje</p>
+                    <p>
+                        <select name="lenguajes">
+                            <option value="JS">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Java" selected>Java</option>
+                            <option value="C#">C#</option>
+                            <option value="C++">C++</option>
+                        </select>
+                    </p>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div class="morado">
+                <p calss="pequeño">Ejemplo de fusión de celdas</p>
+                <table border="1px">
+                    <tr>
+                        <td>Fusión de celdas</td>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                        <th>Columna 3</th>
+                        <th>Columna 4</th>
+                        <th>Columna 5</th>
+                    </tr>
+                    <tr>
+                        <td class="negrita">Fila 1</td>
+                        <td rowspan="2">A</td>
+                        <td colspan="2">B</td>
+                        <td colspan="2">C</td>
+                    </tr>
+                    <tr>
+                        <td class="negrita">Fila 2</td>
+                        <td rowspan="2">D</td>
+                        <td colspan="2">E</td>
+                        <td rowspan="2">F</td>
+                    </tr>
+                    <tr>
+                        <td class="negrita">Fila 3</td>
+                        <td rowspan="2">G</td>
+                        <td colspan="2" rowspan="2">H</td>
+                    </tr>
+                    <tr>
+                        <td class="negrita">Fila 4</td>
+                        <td>I</td>
+                        <td>J</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

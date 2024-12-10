@@ -1,6 +1,76 @@
-h1{
-    color: white;
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 .arriba{
+    font-family: Helvetica, sans-serif;
+    color: white;
     background-color: red;
+    height: 40%;
+    width: 100%;
+}
+.examen{
+    background-color: blue;
+    padding: 30px;
+    position: absolute;
+    height: 140px;
+    width: 700px;
+    top: 10%;
+    left: 10%;
+}
+.nombre{
+    background-color: orange;
+    padding: 30px;
+    text-align: center;
+    height: 50%;
+    width: 40%;
+}
+.medio{
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 9px;
+    padding: 4px;
+}
+.a{
+    background-color: white;
+}
+.uno{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+.dos{
+    grid-column: 3;
+    grid-row: 1;
+}
+.tres{
+    grid-column: 1/3;
+    grid-row: 2;
+}
+.cuatro{
+    grid-column: 3;
+    grid-row: 2;
+}
+.cinco{
+    grid-column: 1/3;
+    grid-row: 3;
+}
+.abajo{
+    background-color: turquoise;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.izquierda{
+    background-color: yellow;
+}
+.derecha{
+    background-color: greenyellow;
+}
+table, td{
+    border: 1px solid black;
 }

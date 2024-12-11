@@ -107,11 +107,13 @@ Book * search_one_id(Book const * one_id, int id_number){ // Es una función Boo
     }
 }
 
-void modify_stock(const Book * book_stock){
-	int another_id, stock_quantity;
+void modify_stock(const Book * book_stock, int another_id){
+	int stock_quantity;
 	Book * book_to_change;
-	printf("Vamos a modificar el stock de los libros, escribe el ID que quieras: ");
-	scanf("%d", &another_id);
+	if (another_id != 666){
+		printf("Vamos a modificar el stock de los libros, escribe el ID que quieras: ");
+		scanf("%d", &another_id);
+	}
 	book_to_change = search_one_id(book_stock, another_id);
 	if(another_id <= BOOKS_QUANTITY && another_id > 0){ // Compruebo que el ID exista para modificar su stock.
 		printf("Ésta es la información inicial: \n");
@@ -188,14 +190,29 @@ int main(int argumento_count, char ** argumento_value){
         {40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10}
     };
 
-    printf("Lista de argumentos:%s\n", *argumento_value);
+    printf("Lista de argumentos:\n");
     for(int i = 0; i<argumento_count; i++){
     	printf("\t Argumento %d: %s\n", i, argumento_value[i]);
     }
     if (argumento_count > 1){
-    	switch(**argumento_value){
-    	case 0: 
-    		break;
+    	if (argumento_value[1] == "todo"){
+    		show_n_books(&books[0], BOOKS_QUANTITY);
+    	} else if (argumento_value[1] == "mostrar"){
+    		if (argumento_count > 2){
+    			show_book(search_one_id(&books[0], argumento_value[2]));
+    		} else {
+    			show_n_books(&books[0], BOOKS_QUANTITY);
+    		}
+    	} else if (argumento_value[1] == "stock") {
+    		modify_stock(&books[0], argumento_value[2]);
+    	} else if (argumento_value[1] == "categoria"){
+    		for (int i = 0; i < BOOKS_QUANTITY; ++i){
+				if (argumento_value[2]-1 == &books[i].gender){ // Pongo -1 porque yo pido al usuario números del 1 al 5 en vez del 0 al 4. Pongo -> porque first_book es una dirección de memoria.
+					show_book(&books[0]+i);
+				}
+			}
+    	} else if (argumento_value[1] == "autor"){
+    		show_book_by_author(&books[0]);
     	}
     } else {
 // Muestro todo el catálogo //
@@ -206,7 +223,7 @@ int main(int argumento_count, char ** argumento_value){
     show_book_by_id(&books[0]);    
 
 // Pido al usuario que cambie la cantidad de un libro por ID //
-    modify_stock(&books[0]);
+    modify_stock(&books[0], 666);
 
 // Muestro todos los libros que pertenecen a una categoría //
     show_book_by_category(&books[0]);

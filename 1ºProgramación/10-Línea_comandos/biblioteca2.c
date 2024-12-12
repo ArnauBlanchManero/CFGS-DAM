@@ -195,11 +195,11 @@ int main(int argumento_count, char ** argumento_value){
     	printf("\t Argumento %d: %s\n", i, argumento_value[i]);
     }
     if (argumento_count > 1){
-    	if (argumento_value[1] == "todo"){
+    	if (argumento_value[1] == "todo"){ // Tengo que usar strcmp para comparar strings
     		show_n_books(&books[0], BOOKS_QUANTITY);
     	} else if (argumento_value[1] == "mostrar"){
     		if (argumento_count > 2){
-    			show_book(search_one_id(&books[0], argumento_value[2]));
+    			show_book(search_one_id(&books[0], argumento_value[2])); // argumento_value[2] es un char, tengo que usar atoi para convertirlo a int
     		} else {
     			show_n_books(&books[0], BOOKS_QUANTITY);
     		}

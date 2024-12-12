@@ -67,9 +67,11 @@ body, html{
 }
 .izquierda{
     background-color: yellow;
+    max-height: fit-content;
 }
 .derecha{
     background-color: greenyellow;
+    max-height: fit-content;
 }
 table, td{
     border: 1px solid black;

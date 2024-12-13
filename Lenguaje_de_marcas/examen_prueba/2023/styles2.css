@@ -1,0 +1,42 @@
+div, body, html{
+    padding: 0px;
+    margin: 0px;
+}
+.cuerpo div{
+    padding: 5px;
+    margin: 5px;
+}
+.cuerpo{
+    background-color: blue;
+    display: flex;
+}
+.lado{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.verde{
+    background-color: greenyellow;
+    grid-column: span 2;
+    font-family: Helvetica, sans-serif;
+}
+.amarillo{
+    background-color: yellow;
+    font-family: Arial, sans-serif;
+}
+table, td{
+    border: 1px solid black;
+}
+.azul{
+    background-color: darkturquoise;
+    grid-column: span 2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.pie{
+    background-color: pink;
+    text-align: center;
+}
+div > p{
+    margin: 0px;
+}

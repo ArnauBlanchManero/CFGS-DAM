@@ -51,39 +51,46 @@
                 <table>
                     <tr>
                         <td>Nombre: </td>
-                        <td><input type="text" name="Nombre">  F.Nac.: <input type="text" name="Fecha de Nacimiento">  DNI: <input type="text" name="DNI"></td>
+                        <td><input type="text" name="nombre"> F.Nac.: <input type="date" name="fecha_nac"> DNI: <input type="text" name="DNI"></td>
                     </tr>
                     <tr>
                         <td>Apellidos: </td>
-                        <td><input type="text" name="Apellidos"></td>
+                        <td><input type="text" name="apellidos"></td>
                     </tr>
                     <tr>
                         <td>Calle y número: </td>
-                        <td><input type="text" name="Calle y número"></td>
+                        <td><input type="text" name="calle_numero"></td>
                     </tr>
                     <tr>
                         <td>Código Postal: </td>
-                        <td><input type="text" name="Código Postal"> Ciudad: <input type="text"></td>
+                        <td><input type="text" name="cod_postal"> Ciudad: <input type="text" name="ciudad"></td>
                     </tr>
                     <tr>
                         <td>Provincia: </td>
-                        <td><input type="text" name="Provincia"> Teléfono: <input type="text"></td>
+                        <td><input type="text" name="provincia"> Teléfono: <input type="text" name="tel"></td>
                     </tr>
                     <tr>
                         <td>Opción: </td>
-                        <td>Escoja una opción</td>
+                        <td>Escoja una opción 
+                            <select name="opciones">
+                                <option value="uno">OPCION 1</option>
+                                <option value="dos">OPCION 2</option>
+                                <option value="tres">OPCION 3</option>
+                                <option value="cuatro">OPCION 4</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td>Comentarios Personales: </td>
-                        <td><input type="text" name="Comentarios Personales"></td>
+                        <td><textarea rows="2" cols="30"></textarea></td>
                     </tr>
                     <tr>
                         <td>Pulse aquí: </td>
-                        <td></td>
+                        <td><input type="submit" value="Enviar datos"> <input type="reset" value="Borrar los datos"></td>
                     </tr>
                     <tr>
                         <td>Opción: </td>
-                        <td>Empleo actual: <input type="button"> Copia Personal <input type="button"> No copia personal</td>
+                        <td>Empleo actual: <input type="radio" name="opcion"> Copia Personal <input type="radio" name="opcion"> No copia personal</td>
                     </tr>
                 </table>
             </form>

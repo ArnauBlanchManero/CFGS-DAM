@@ -76,3 +76,6 @@ body, html{
 table, td{
     border: 1px solid black;
 }
+input{
+    max-width: fit-content;
+}

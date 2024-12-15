@@ -1,24 +1,29 @@
 html, body{
     padding: 0px;
     margin: 0px;
+    align-content: center;
 }
 div{
     border: 2px solid black;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    margin: 10px;
 }
 .morado{
     background-color: purple;
     height: 100%;
+    max-width: 900px;
+    margin: auto;
 }
 .rosa{
     background-color: pink;
 }
 .azuloscuro{
     background-color: blue;
+    height: 50px;
 }
 .blanco{
     background-color: white;
+    height: 40px;
     display: flex;
 }
 .verdeoscuro{
@@ -29,17 +34,20 @@ div{
     background-color: orange;
     width: 30%;
 }
-.amarillo{
-    background-color: yellow;
-}
 .medio{
     display: flex;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.amarillo{
+    background-color: yellow;
+    height: 100px;
 }
 .verdeclaro{
     background-color: lightgreen;
     display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
+    width: 100%;
 }
 .verde{
     background-color: green;
@@ -47,7 +55,10 @@ div{
 }
 .azulclaro{
     background-color: lightblue;
+    height: 229px;
+    grid-column: 2;
 }
 .rojo{
     background-color: tomato;
+    height: 75px;
 }

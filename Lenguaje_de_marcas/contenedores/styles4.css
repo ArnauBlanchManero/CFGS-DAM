@@ -1,0 +1,53 @@
+html, body{
+    padding: 0px;
+    margin: 0px;
+}
+div{
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.morado{
+    background-color: purple;
+    height: 100%;
+}
+.rosa{
+    background-color: pink;
+}
+.azuloscuro{
+    background-color: blue;
+}
+.blanco{
+    background-color: white;
+    display: flex;
+}
+.verdeoscuro{
+    background-color: darkgreen;
+    width: 25%;
+}
+.naranja{
+    background-color: orange;
+    width: 30%;
+}
+.amarillo{
+    background-color: yellow;
+}
+.medio{
+    display: flex;
+}
+.verdeclaro{
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+}
+.verde{
+    background-color: green;
+    grid-row: 1/3;
+}
+.azulclaro{
+    background-color: lightblue;
+}
+.rojo{
+    background-color: tomato;
+}

@@ -8,57 +8,140 @@ div{
     padding: 10px;
     margin: 10px;
 }
-.morado{
+.rojo1{
+    background-color: red;
+    max-width: 400px;
+    margin: auto;
+}
+.verde1{
+    width: 48%;
+    background-color: green;
+    float: left;
+    height: 40px;
+}
+.morado1{
+    width: 30%;
+    float: right;
+    height: 40px;
+    background-color: purple;
+}
+.amarillo1{
+    width: 89%;
+    clear: both;
+    height: 50px;
+    background-color: yellow;
+}
+.amarillo2{
+    background-color: yellow;
+    max-width: 700px;
+    margin: auto;
+}
+.verde2{
+    background-color: green;
+    display: flex;
+}
+.morado2{
+    background-color: purple;
+    height: 40px;
+    width: 50%;
+    margin-left:auto;
+}
+.naranja2{
+    background-color: orange; 
+    display: flex;
+}
+.naranja2 > div{
+    width: 20%;
+    height: 50px;
+}
+.rosa2{
+    background-color: pink;
+}
+.rojo2{
+    background-color: red;
+}
+.amarillo3{
+    background-color: yellow;
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.verde3{
+    background-color: green;
+    display: left;
+    width: 52%;
+    height: 100px;
+}
+.rosa3{
+    background-color: pink;
+    display: right;
+    width: 19%;
+    height: 100px;
+}
+.verdeoscuro3{
+    background-color: darkgreen;
+    display: left;
+    width: 35%;
+    height: 100px;
+}
+.azul3{
+    background-color: blue;
+    display: right;
+    width: 35%;
+    height: 100px;
+}
+.morado4{
     background-color: purple;
     height: 100%;
     max-width: 900px;
     margin: auto;
 }
-.rosa{
+.rosa4{
     background-color: pink;
 }
-.azuloscuro{
+.azuloscuro4{
     background-color: blue;
     height: 50px;
 }
-.blanco{
+.blanco4{
     background-color: white;
     height: 40px;
     display: flex;
 }
-.verdeoscuro{
+.verdeoscuro4{
     background-color: darkgreen;
     width: 25%;
 }
-.naranja{
+.naranja4{
     background-color: orange;
     width: 30%;
 }
-.medio{
+.medio4{
     display: flex;
     border: 0px;
     margin: 0px;
     padding: 0px;
 }
-.amarillo{
+.amarillo4{
     background-color: yellow;
     height: 100px;
 }
-.verdeclaro{
+.verdeclaro4{
     background-color: lightgreen;
     display: grid;
     width: 100%;
 }
-.verde{
+.verde4{
     background-color: green;
     grid-row: 1/3;
 }
-.azulclaro{
+.azulclaro4{
     background-color: lightblue;
     height: 229px;
     grid-column: 2;
 }
-.rojo{
+.rojo4{
     background-color: tomato;
     height: 75px;
 }

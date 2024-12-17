@@ -1,0 +1,86 @@
+/* Hecho por Arnau Blanch Manero */
+*{
+    font-family: Arial, sans-serif;
+}
+html, body{
+    margin: 0px;
+}
+.caja1{
+    background-color: pink;
+    width: 70vw;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 1%;
+    position: absolute;
+    z-index: 1;
+}
+.moradas{
+    background-color: purple;
+    width: 33.3%;
+    margin: 2% 0px 7% 0px;
+}
+.caja2{
+    background-color: cyan;
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+h1{
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    color: white;
+}
+.formulario{
+    background-color: orange;
+    grid-column: span 3;
+    padding: 10px;
+}
+.amarillo1{
+    background-color: yellow;
+    grid-column: span 2;
+}
+.amarillo2{
+    background-color: yellow;
+    grid-column: span 2;
+}
+.anaranja{
+    background-color: orange;
+    grid-row: 2/4;
+    grid-column: 3;
+}
+.caja3{
+    background-color: green;
+    width: 70vw;
+    height: 30vh;
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    z-index: 2;
+}
+.caja4{
+    background-color: turquoise;
+    width: 55vw;
+    height: 40vh;
+    padding: 10px;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    z-index: 3;
+    align-content: center;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}

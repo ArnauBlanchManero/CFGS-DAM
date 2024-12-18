@@ -55,15 +55,14 @@ void show_book(const Book const * one_book){ //Sirve para mostrar toda la inform
 	printf("\tCantidad: %d\n", one_book->quantity);
 }
 
-void show_book_by_author(Book const * author_book){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las direcciones de memoria pero no queiro modificar su contenido.
-	char search_author[MAX_AUTHOR_LENGHT];
+void show_book_by_author(Book const * author_book, char * search_author, int author_size){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las direcciones de memoria pero no queiro modificar su contenido.
 	int author_length;
 	int string_length;
-
+/*
 	printf("Dime un autor y yo te diré sus libros: ");
 	scanf(" "); // Este scanf sirve para reiniciar el buffer y eliminar el \n que había después de buscar la categoría.
-	fgets(search_author, sizeof(search_author), stdin); // Sirve para pedir al usuario una cadena de caracteres que pueda incluir espacios.
-	author_length = strlen(search_author)-1; // Uso strlen para saber su longitud pero también me cuenta el \n así que le resto 1.
+	fgets(search_author, author_size, stdin); // Sirve para pedir al usuario una cadena de caracteres que pueda incluir espacios.*/
+	author_length = author_size-1; // Usaba strlen para saber su longitud pero también me cuenta el \n así que le resto 1.
 
 	for (int i = 0; i < BOOKS_QUANTITY; ++i){
 		if(strlen(author_book->author) <= author_length){ // Esta comparación sirve para comprobar que el autor que estoy buscando tiene una longitud mayor al autor del libro que voy a comparar.
@@ -81,10 +80,7 @@ void show_book_by_author(Book const * author_book){ // Pongo la constante en el 
 	}
 }
 
-void show_book_by_category(Book const * first_book){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las direcciones de memoria pero no queiro modificar su contenido.
-	int category_number;
-    printf("Dime una categoría (1, 2, 3, 4 o 5) y yo te mostraré todos sus libros: ");
-    scanf("%d", &category_number);
+void show_book_by_category(Book const * first_book, int category_number){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las direcciones de memoria pero no queiro modificar su contenido.
 	for (int i = 0; i < BOOKS_QUANTITY; ++i){
 		if (category_number-1 == first_book->gender){ // Pongo -1 porque yo pido al usuario números del 1 al 5 en vez del 0 al 4. Pongo -> porque first_book es una dirección de memoria.
 			show_book(first_book);
@@ -100,26 +96,19 @@ Book * search_one_id(Book const * one_id, int id_number){ // Es una función Boo
     	for (int i = 0; i < BOOKS_QUANTITY; ++i){
 		    	if(id_number == one_id->id){ // También podría poner one_id[i].id si no incrementara después de cada vuelta.
 		    		return one_id; // Cuando encuentro el ID lo devuelvo y acabo el bucle.
-		    		break; // Como sólo hay un ID salgo del bucle.
+		    		break; // Como sólo hay un ID salgo del bucle. (no hace falta ponerlo porque al haber un return se acaba el bucle igual)
 		    	}
 		    	one_id++; // Tengo que ir aumentando la dirección de memoria para buscar en todo el array y no apuntar simepre al primer elemento.
 		    }
     }
 }
 
-void modify_stock(const Book * book_stock, int another_id){
-	int stock_quantity;
+void modify_stock(const Book * book_stock, int another_id, int stock_quantity){
 	Book * book_to_change;
-	if (another_id != 666){
-		printf("Vamos a modificar el stock de los libros, escribe el ID que quieras: ");
-		scanf("%d", &another_id);
-	}
 	book_to_change = search_one_id(book_stock, another_id);
 	if(another_id <= BOOKS_QUANTITY && another_id > 0){ // Compruebo que el ID exista para modificar su stock.
 		printf("Ésta es la información inicial: \n");
 		show_book(book_to_change);
-		printf("Cuánto quieres añadir a la cantidad? ");
-		scanf("%d", &stock_quantity);
 		book_to_change->quantity += stock_quantity; // Añado la cantidad que quiera el usuario sobre lo que ya había.
 		printf("Ésta es la información final: \n");
 		show_book(book_to_change);
@@ -145,7 +134,7 @@ void show_n_books(Book const * n_books, int max){ // Recibe la dirección de mem
 	}
 }
 
-int main(int argumento_count, char ** argumento_value){
+int main(int argc, char ** argv){ // int argumento_count, char ** argumento_value
 
 	Book books[BOOKS_QUANTITY] = {
         {1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10},
@@ -188,50 +177,63 @@ int main(int argumento_count, char ** argumento_value){
         {38, "The Communist Manifesto", "Karl Marx and Friedrich Engels", 5.99, ESSAY, 12},
         {39, "The Republic", "Plato", 16.00, ESSAY, 6},
         {40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10}
-    };
+    }; 
 
-    printf("Lista de argumentos:\n");
-    for(int i = 0; i<argumento_count; i++){
-    	printf("\t Argumento %d: %s\n", i, argumento_value[i]);
-    }
-    if (argumento_count > 1){
-    	if (argumento_value[1] == "todo"){ // Tengo que usar strcmp para comparar strings
-    		show_n_books(&books[0], BOOKS_QUANTITY);
-    	} else if (argumento_value[1] == "mostrar"){
-    		if (argumento_count > 2){
-    			show_book(search_one_id(&books[0], argumento_value[2])); // argumento_value[2] es un char, tengo que usar atoi para convertirlo a int
-    		} else {
-    			show_n_books(&books[0], BOOKS_QUANTITY);
-    		}
-    	} else if (argumento_value[1] == "stock") {
-    		modify_stock(&books[0], argumento_value[2]);
-    	} else if (argumento_value[1] == "categoria"){
-    		for (int i = 0; i < BOOKS_QUANTITY; ++i){
-				if (argumento_value[2]-1 == &books[i].gender){ // Pongo -1 porque yo pido al usuario números del 1 al 5 en vez del 0 al 4. Pongo -> porque first_book es una dirección de memoria.
-					show_book(&books[0]+i);
-				}
-			}
-    	} else if (argumento_value[1] == "autor"){
-    		show_book_by_author(&books[0]);
-    	}
-    } else {
-// Muestro todo el catálogo //
-    printf("Voy a mostrar todos los libros:\n");
-    show_n_books(&books[0], BOOKS_QUANTITY); // Paso la dirección de memoria en la que tiene que empezar y la cantidad que tiene que imprimir.
+if (argc == 1){ // El primer argumento es el ejecutable .out
+	// Muestro todo el catálogo //
+	    printf("Voy a mostrar todos los libros:\n");
+	    show_n_books(&books[0], BOOKS_QUANTITY); // Paso la dirección de memoria en la que tiene que empezar y la cantidad que tiene que imprimir.
 
-// Muestro la info de un libro a partir de un ID //
-    show_book_by_id(&books[0]);    
+	// Muestro la info de un libro a partir de un ID //
+	    show_book_by_id(&books[0]);    
 
-// Pido al usuario que cambie la cantidad de un libro por ID //
-    modify_stock(&books[0], 666);
+	// Pido al usuario que cambie la cantidad de un libro por ID //
+	    int id_stock, quantity_change;
+		printf("Vamos a modificar el stock de los libros, escribe el ID que quieras: ");
+		scanf("%d", &id_stock);
+		printf("Cuánto quieres añadir a la cantidad? ");
+		scanf("%d", &quantity_change);
+	    modify_stock(&books[0], id_stock, quantity_change);
 
-// Muestro todos los libros que pertenecen a una categoría //
-    show_book_by_category(&books[0]);
+	// Muestro todos los libros que pertenecen a una categoría //
+	    int number_of_category;
+		printf("Dime una categoría\n1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\nY yo te mostraré todos sus libros: ");
+		scanf("%d", &number_of_category);
+	    show_book_by_category(&books[0], number_of_category);
 
-// Muestro todos los libros que pertenecen a un autor //
-    show_book_by_author(&books[0]);
+	// Muestro todos los libros que pertenecen a un autor //
+	    char author_name[MAX_AUTHOR_LENGHT];
+	    int author_length;
+		printf("Dime un autor y yo te diré sus libros: ");
+		scanf(" "); // Este scanf sirve para reiniciar el buffer y eliminar el \n que había después de buscar la categoría.
+		fgets(author_name, sizeof(author_name), stdin); // Sirve para pedir al usuario una cadena de caracteres que pueda incluir espacios.
+		author_length = strlen(author_name)-1;
+	    show_book_by_author(&books[0], author_name, author_length);
+	} else if (argc == 2){ // Puede que haya escrito mostar o añadir
+		if(strcmp(argv[1], "mostrar") == 0){
+			show_n_books(&books[0], BOOKS_QUANTITY);
+		} else if (strcmp(argv[1], "añadir") == 0){ // 	ME FALTA ESTO!!!
+			printf("añadir");
+		}
+	} else if (argc == 3){ // Hay que diferenciar entre mostrar, categoría o autor
+		if(strcmp(argv[1], "mostrar") == 0){
+			int id_mostar = atoi(argv[2]);
+			show_book(&books[id_mostar-1]);
+		} else if (strcmp(argv[1], "categoría") == 0){
+		    printf("1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\n");
+			int category_number_arg = atoi(argv[2]);
+		    show_book_by_category(&books[0], category_number_arg);
+		} else if (strcmp(argv[1], "autor") == 0){
+			int author_length_arg;
+			author_length_arg = strlen(argv[2])-1;
+			show_book_by_author(&books[0], argv[2], author_length_arg);
+		}
+	} else if (argc >= 4){
+		if(strcmp(argv[1], "stock") == 0){
+			int id_stock_arg = atoi(argv[2]);
+			int quantity_stock_arg = atoi(argv[3]);
+			modify_stock(&books[0], id_stock_arg, quantity_stock_arg);
+		}
 	}
-
-
 	return EXIT_SUCCESS;
 }

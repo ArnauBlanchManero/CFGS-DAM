@@ -163,7 +163,7 @@ void show_P6(Book * book1){
 		    show_book_by_author(book1, author_name, author_length);
 }
 
-Book add_book(Book * direction, int add_id, char * add_title, char * add_author, float add_price, int add_gender, int add_quantity){
+Book * add_book(Book * direction, int add_id, char * add_title, char * add_author, float add_price, int add_gender, int add_quantity){
 	direction = (Book *) realloc(direction, sizeof(Book) * (books_quantity+1)); // Pongo +1 porque se inicializa en 0
 	direction[books_quantity].id = add_id;
 	strcpy(direction[books_quantity].title, add_title);
@@ -172,10 +172,10 @@ Book add_book(Book * direction, int add_id, char * add_title, char * add_author,
 	direction[books_quantity].gender = add_gender;
 	direction[books_quantity].quantity = add_quantity;
 	books_quantity++; // Ya he añadido un libro y lo aumento en uno
-	return *direction;
+	return direction;
 }
 
-Book pedir_libro(Book * direction_to_send){
+Book * pedir_libro(Book * direction_to_send){
 	int new_id, new_quantity, new_gender;
 	char new_title[MAX_TITLE_LENGHT];
 	char new_author[MAX_AUTHOR_LENGHT];
@@ -197,52 +197,52 @@ Book pedir_libro(Book * direction_to_send){
 	scanf(" %d", &new_gender);
 	printf("Cantidad: ");
 	scanf(" %d", &new_quantity);
-	return add_book(direction_to_send - books_quantity, new_id, new_title, new_author, new_price, new_gender, new_quantity);
+	return add_book(direction_to_send, new_id, new_title, new_author, new_price, new_gender, new_quantity);
 }
 
 int main(int argc, char ** argv){ // int argumento_count, char ** argumento_value
 	Book * books = (Book *) malloc(sizeof(Book));
 	//add_book(/* direction de memoria donde guardar el libro*/books, 0, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10); // Titulo y autor tambien pueden ser memoria dinámica
-    *books = add_book(books, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10);
-    *books = add_book(books, 2, "1984", "George Orwell", 12.49, FICTION, 5);
-    *books = add_book(books, 3, "The Great Gatsby", "F. Scott Fitzgerald", 10.99, FICTION, 8);
-    *books = add_book(books, 4, "Moby Dick", "Herman Melville", 18.99, FICTION, 12);
-    *books = add_book(books, 5, "War and Peace", "Leo Tolstoy", 20.00, FICTION, 7);
-    *books = add_book(books, 6, "Pride and Prejudice", "Jane Austen", 14.99, FICTION, 9);
-    *books = add_book(books, 7, "The Catcher in the Rye", "J.D. Salinger", 10.00, FICTION, 6);
-    *books = add_book(books, 8, "The Odyssey", "Homer", 17.49, FICTION, 4);
-    *books = add_book(books, 9, "Ulysses", "James Joyce", 25.00, FICTION, 2);
-    *books = add_book(books, 10, "The Divine Comedy", "Dante Alighieri", 22.00, POETRY, 3);
-    *books = add_book(books, 11, "Leaves of Grass", "Walt Whitman", 13.00, POETRY, 11);
-    *books = add_book(books, 12, "The Iliad", "Homer", 18.50, FICTION, 7);
-    *books = add_book(books, 13, "A Brief History of Time", "Stephen Hawking", 15.00, NON_FICTION, 15);
-    *books = add_book(books, 14, "The Art of War", "Sun Tzu", 9.99, NON_FICTION, 20);
-    *books = add_book(books, 15, "Sapiens: A Brief History of Humankind", "Yuval Noah Harari", 16.49, NON_FICTION, 13);
-    *books = add_book(books, 16, "The Selfish Gene", "Richard Dawkins", 14.00, NON_FICTION, 6);
-    *books = add_book(books, 17, "The Road to Serfdom", "F.A. Hayek", 10.50, NON_FICTION, 5);
-    *books = add_book(books, 18, "The Wealth of Nations", "Adam Smith", 30.00, NON_FICTION, 8);
-    *books = add_book(books, 19, "On the Origin of Species", "Charles Darwin", 24.99, NON_FICTION, 4);
-    *books = add_book(books, 20, "The Prince", "Niccolò Machiavelli", 8.99, NON_FICTION, 14);
-    *books = add_book(books, 21, "Hamlet", "William Shakespeare", 11.50, THEATER, 6);
-    *books = add_book(books, 22, "Macbeth", "William Shakespeare", 9.50, THEATER, 8);
-    *books = add_book(books, 23, "Othello", "William Shakespeare", 10.99, THEATER, 7);
-    *books = add_book(books, 24, "A Doll's House", "Henrik Ibsen", 12.50, THEATER, 5);
-    *books = add_book(books, 25, "Waiting for Godot", "Samuel Beckett", 13.99, THEATER, 4);
-    *books = add_book(books, 26, "Death of a Salesman", "Arthur Miller", 14.99, THEATER, 10);
-    *books = add_book(books, 27, "The Glass Menagerie", "Tennessee Williams", 11.00, THEATER, 9);
-    *books = add_book(books, 28, "Long Day's Journey into Night", "Eugene O'Neill", 19.50, THEATER, 3);
-    *books = add_book(books, 29, "The Importance of Being Earnest", "Oscar Wilde", 8.50, THEATER, 15);
-    *books = add_book(books, 30, "The Waste Land", "T.S. Eliot", 6.99, POETRY, 10);
-    *books = add_book(books, 31, "Paradise Lost", "John Milton", 12.00, POETRY, 7);
-    *books = add_book(books, 32, "Beowulf", "Anonymous", 15.00, POETRY, 5);
-    *books = add_book(books, 33, "Essays", "Michel de Montaigne", 20.00, ESSAY, 4);
-    *books = add_book(books, 34, "Self-Reliance and Other Essays", "Ralph Waldo Emerson", 9.00, ESSAY, 9);
-    *books = add_book(books, 35, "Civil Disobedience and Other Essays", "Henry David Thoreau", 7.50, ESSAY, 11);
-    *books = add_book(books, 36, "Meditations", "Marcus Aurelius", 11.99, ESSAY, 8);
-    *books = add_book(books, 37, "The Federalist Papers", "Alexander Hamilton, James Madison, John Jay", 18.00, ESSAY, 5);
-    *books = add_book(books, 38, "The Communist Manifesto", "Karl Marx and Friedrich Engels", 5.99, ESSAY, 12);
-    *books = add_book(books, 39, "The Republic", "Plato", 16.00, ESSAY, 6);
-    *books = add_book(books, 40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10);
+    books = add_book(books, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10);
+    books = add_book(books, 2, "1984", "George Orwell", 12.49, FICTION, 5);
+    books = add_book(books, 3, "The Great Gatsby", "F. Scott Fitzgerald", 10.99, FICTION, 8);
+    books = add_book(books, 4, "Moby Dick", "Herman Melville", 18.99, FICTION, 12);
+    books = add_book(books, 5, "War and Peace", "Leo Tolstoy", 20.00, FICTION, 7);
+    books = add_book(books, 6, "Pride and Prejudice", "Jane Austen", 14.99, FICTION, 9);
+    books = add_book(books, 7, "The Catcher in the Rye", "J.D. Salinger", 10.00, FICTION, 6);
+    books = add_book(books, 8, "The Odyssey", "Homer", 17.49, FICTION, 4);
+    books = add_book(books, 9, "Ulysses", "James Joyce", 25.00, FICTION, 2);
+    books = add_book(books, 10, "The Divine Comedy", "Dante Alighieri", 22.00, POETRY, 3);
+    books = add_book(books, 11, "Leaves of Grass", "Walt Whitman", 13.00, POETRY, 11);
+    books = add_book(books, 12, "The Iliad", "Homer", 18.50, FICTION, 7);
+    books = add_book(books, 13, "A Brief History of Time", "Stephen Hawking", 15.00, NON_FICTION, 15);
+    books = add_book(books, 14, "The Art of War", "Sun Tzu", 9.99, NON_FICTION, 20);
+    books = add_book(books, 15, "Sapiens: A Brief History of Humankind", "Yuval Noah Harari", 16.49, NON_FICTION, 13);
+    books = add_book(books, 16, "The Selfish Gene", "Richard Dawkins", 14.00, NON_FICTION, 6);
+    books = add_book(books, 17, "The Road to Serfdom", "F.A. Hayek", 10.50, NON_FICTION, 5);
+    books = add_book(books, 18, "The Wealth of Nations", "Adam Smith", 30.00, NON_FICTION, 8);
+    books = add_book(books, 19, "On the Origin of Species", "Charles Darwin", 24.99, NON_FICTION, 4);
+    books = add_book(books, 20, "The Prince", "Niccolò Machiavelli", 8.99, NON_FICTION, 14);
+    books = add_book(books, 21, "Hamlet", "William Shakespeare", 11.50, THEATER, 6);
+    books = add_book(books, 22, "Macbeth", "William Shakespeare", 9.50, THEATER, 8);
+    books = add_book(books, 23, "Othello", "William Shakespeare", 10.99, THEATER, 7);
+    books = add_book(books, 24, "A Doll's House", "Henrik Ibsen", 12.50, THEATER, 5);
+    books = add_book(books, 25, "Waiting for Godot", "Samuel Beckett", 13.99, THEATER, 4);
+    books = add_book(books, 26, "Death of a Salesman", "Arthur Miller", 14.99, THEATER, 10);
+    books = add_book(books, 27, "The Glass Menagerie", "Tennessee Williams", 11.00, THEATER, 9);
+    books = add_book(books, 28, "Long Day's Journey into Night", "Eugene O'Neill", 19.50, THEATER, 3);
+    books = add_book(books, 29, "The Importance of Being Earnest", "Oscar Wilde", 8.50, THEATER, 15);
+    books = add_book(books, 30, "The Waste Land", "T.S. Eliot", 6.99, POETRY, 10);
+    books = add_book(books, 31, "Paradise Lost", "John Milton", 12.00, POETRY, 7);
+    books = add_book(books, 32, "Beowulf", "Anonymous", 15.00, POETRY, 5);
+    books = add_book(books, 33, "Essays", "Michel de Montaigne", 20.00, ESSAY, 4);
+    books = add_book(books, 34, "Self-Reliance and Other Essays", "Ralph Waldo Emerson", 9.00, ESSAY, 9);
+    books = add_book(books, 35, "Civil Disobedience and Other Essays", "Henry David Thoreau", 7.50, ESSAY, 11);
+    books = add_book(books, 36, "Meditations", "Marcus Aurelius", 11.99, ESSAY, 8);
+    books = add_book(books, 37, "The Federalist Papers", "Alexander Hamilton, James Madison, John Jay", 18.00, ESSAY, 5);
+    books = add_book(books, 38, "The Communist Manifesto", "Karl Marx and Friedrich Engels", 5.99, ESSAY, 12);
+    books = add_book(books, 39, "The Republic", "Plato", 16.00, ESSAY, 6);
+    books = add_book(books, 40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10);
 
 	if (argc == 1){ // El primer argumento es el ejecutable .out
 		show_P6(&books[0]);
@@ -250,8 +250,8 @@ int main(int argc, char ** argv){ // int argumento_count, char ** argumento_valu
 			if(strcmp(argv[1], "mostrar") == 0){
 				show_n_books(&books[0], books_quantity);
 			} else if (strcmp(argv[1], "añadir") == 0){
-				books[books_quantity] = pedir_libro(&books[books_quantity-1]);
-				show_book(&books[books_quantity]);
+				books = pedir_libro(books);
+				show_book(&books[books_quantity-1]);
 			}
 	} else if (argc == 3){ // Hay que diferenciar entre mostrar, categoría o autor
 			if(strcmp(argv[1], "mostrar") == 0){

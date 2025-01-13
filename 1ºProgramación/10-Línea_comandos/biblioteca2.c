@@ -34,28 +34,28 @@ typedef struct{
 
 void show_book(const Book const * one_book){ //Sirve para mostrar toda la información del libro al que apunte la dirección de memoria que le pasan.
 	printf("ID: %d\n", one_book->id);
-	printf("\tTítulo: %s\n", one_book->title);
-	printf("\tAutor: %s\n", one_book->author);
-	printf("\tPrecio: %.2f\n", one_book->price);
+	printf("\tTitle: %s\n", one_book->title);
+	printf("\tAuthor: %s\n", one_book->author);
+	printf("\tPrice: %.2f\n", one_book->price);
 	// Aquí hago un switch para escribir cada categoría en vez de su número.
 	switch(one_book->gender){
 		case 0: 
-			printf("\tCategoría: FICTION\n");
+			printf("\tCategory: FICTION\n");
 			break;
 		case 1: 
-			printf("\tCategoría: NON_FICTION\n");
+			printf("\tCategory: NON_FICTION\n");
 			break;
 		case 2: 
-			printf("\tCategoría: POETRY\n");
+			printf("\tCategory: POETRY\n");
 			break;
 		case 3: 
-			printf("\tCategoría: THEATER\n");
+			printf("\tCategory: THEATER\n");
 			break;
 		case 4: 
-			printf("\tCategoría: ESSAY\n");
+			printf("\tCategory: ESSAY\n");
 			break;
 	}
-	printf("\tCantidad: %d\n", one_book->quantity);
+	printf("\tQuantity: %d\n", one_book->quantity);
 }
 
 void show_book_by_author(Book const * author_book, char * search_author, int author_size){ // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las directiones de memoria pero no queiro modificar su contenido.
@@ -90,7 +90,7 @@ void show_book_by_category(Book const * first_book, int category_number){ // Pon
 
 Book * search_one_id(Book const * one_id, int id_number){ // Es una función Book * porque devuelvo un puntero a Book.
 	if(id_number > books_quantity || id_number <= 0){ // Si no encuentro el id, muestro un mensaje de error.
-    	printf("ERROR, no existe ese id\n");
+    	printf("ERROR, it doesn't exist that id\n");
     } else {
     	for (int i = 0; i < books_quantity; ++i){
 		    	if(id_number == one_id->id){ // También podría poner one_id[i].id si no incrementara después de cada vuelta.
@@ -106,10 +106,10 @@ void modify_stock(const Book * book_stock, int another_id, int stock_quantity){
 	Book * book_to_change;
 	book_to_change = search_one_id(book_stock, another_id);
 	if(another_id <= books_quantity && another_id > 0){ // Compruebo que el ID exista para modificar su stock.
-		printf("Ésta es la información inicial: \n");
+		printf("This is the initial information: \n");
 		show_book(book_to_change);
 		book_to_change->quantity += stock_quantity; // Añado la cantidad que quiera el usuario sobre lo que ya había.
-		printf("Ésta es la información final: \n");
+		printf("This is the final information: \n");
 		show_book(book_to_change);
 	}
 }
@@ -118,7 +118,7 @@ void show_book_by_id(Book const * idbook){
 	int identification;
 	Book * the_id;
 
-	printf("Dime un ID y yo te mostraré la información de ese libro: ");
+	printf("Write an id and I'll show you the information: ");
     scanf("%d", &identification);
     
     the_id = search_one_id(idbook, identification); // Me devuelve la dirección de memoria del libro que tiene el ID que le he pasado.
@@ -151,33 +151,33 @@ Book * pedir_libro(Book * direction_to_send){
 	char new_title[MAX_TITLE_LENGHT];
 	char new_author[MAX_AUTHOR_LENGHT];
 	float new_price;
-	printf("Escribe los datos del nuevo libro:\n");
+	printf("Write the information of the new book:\n");
 	printf("ID: ");
 	scanf(" %d", &new_id);
-	printf("Título: ");
+	printf("Title: ");
 	scanf(" %[^\n]", new_title);
 	//scanf(" %s", &new_title);
-	printf("Autor: ");
+	printf("Author: ");
 	scanf(" %[^\n]", new_author);
 	//scanf(" %s", &new_author);
-	printf("Precio: ");
+	printf("Price: ");
 	scanf(" %f", &new_price);
-	printf("Género (0 -> FICTION, 1 -> NON_FICTION, 2 -> POETRY, 3 -> THEATER, 4 -> ESSAY): ");
+	printf("Gender (0 -> FICTION, 1 -> NON_FICTION, 2 -> POETRY, 3 -> THEATER, 4 -> ESSAY): ");
 	scanf(" %d", &new_gender);
-	printf("Cantidad: ");
+	printf("Quantity: ");
 	scanf(" %d", &new_quantity);
 	return add_book(direction_to_send, new_id, new_title, new_author, new_price, new_gender, new_quantity);
 }
 
 int show_P6(Book * book1){
 	int option;
-	printf("Menú\n");
-	printf("\t1 - Mostrar todos los libros\n\t2 - Mostrar un libro por ID\n\t3 - Modificar el stock\n\t4 - Buscar libros por categoría\n\t5 - Buscar libros que pertenecen a un autor\n\t6 - Salir\nOpcion: ");
+	printf("Menu\n");
+	printf("\t1 - Show all the books\n\t2 - Show one book by ID\n\t3 - Modify the stock\n\t4 - Search books by category\n\t5 - Search books written by one author\n\t6 - Exit\nOption: ");
 	scanf("%d", &option);
 	switch (option){
 		case 1:
 		// Muestro todo el catálogo //
-		    printf("Voy a mostrar todos los libros:\n");
+		    printf("All the books:\n");
 		    show_n_books(book1, books_quantity); // Paso la dirección de memoria en la que tiene que empezar y la cantidad que tiene que imprimir.
 			break;
 		case 2:
@@ -187,16 +187,16 @@ int show_P6(Book * book1){
 		case 3:
 		// Pido al usuario que cambie la cantidad de un libro por ID //
 		    int id_stock, quantity_change;
-			printf("Vamos a modificar el stock de los libros, escribe el ID que quieras: ");
+			printf("Write the ID of the book whose stock you want to change: ");
 			scanf("%d", &id_stock);
-			printf("Cuánto quieres añadir a la cantidad? ");
+			printf("How much do you want to add? ");
 			scanf("%d", &quantity_change);
 		    modify_stock(book1, id_stock, quantity_change);
 			break;
 		case 4:
 		// Muestro todos los libros que pertenecen a una categoría //
 		    int number_of_category;
-			printf("Dime una categoría\n1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\nY yo te mostraré todos sus libros: ");
+			printf("Write the number of one category\n1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\nAll books with that category: ");
 			scanf("%d", &number_of_category);
 		    show_book_by_category(book1, number_of_category);
 			break;
@@ -204,7 +204,7 @@ int show_P6(Book * book1){
 		// Muestro todos los libros que pertenecen a un autor //
 		    char author_name[MAX_AUTHOR_LENGHT];
 		    int author_length;
-			printf("Dime un autor y yo te diré sus libros: ");
+			printf("Write an author and I'll show you his books: ");
 			scanf(" "); // Este scanf sirve para reiniciar el buffer y eliminar el \n que había después de buscar la categoría.
 			fgets(author_name, sizeof(author_name), stdin); // Sirve para pedir al usuario una cadena de caracteres que pueda incluir espacios.
 			author_length = strlen(author_name)-1;
@@ -218,9 +218,9 @@ int show_P6(Book * book1){
 }
 
 int main(int argc, char ** argv){ // int argumento_count, char ** argumento_value
-	printf("¡Bienvenido a la biblioteca!\n");
+	printf("Welcome to the library!\n");
 	Book * books = (Book *) malloc(sizeof(Book));
-	//add_book(/* direction de memoria donde guardar el libro*/books, 0, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10); // Titulo y autor tambien pueden ser memoria dinámica
+	// Titulo y autor tambien pueden ser memoria dinámica
     books = add_book(books, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10);
     books = add_book(books, 2, "1984", "George Orwell", 12.49, FICTION, 5);
     books = add_book(books, 3, "The Great Gatsby", "F. Scott Fitzgerald", 10.99, FICTION, 8);
@@ -278,7 +278,7 @@ int main(int argc, char ** argv){ // int argumento_count, char ** argumento_valu
 			if(strcmp(argv[1], "mostrar") == 0){
 				int id_mostar = atoi(argv[2]);
 				show_book(&books[id_mostar-1]);
-			} else if (strcmp(argv[1], "categoría") == 0){
+			} else if (strcmp(argv[1], "categoria") == 0){
 			    printf("1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\n");
 				int category_number_arg = atoi(argv[2]);
 			    show_book_by_category(&books[0], category_number_arg);

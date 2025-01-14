@@ -170,9 +170,12 @@ Book * pedir_libro(Book * direction_to_send){
 int show_P6(Book * book1){
 	int option;
 	printf("Menu\n");
-	printf("\t1 - Show all the books\n\t2 - Show one book by ID\n\t3 - Modify the stock\n\t4 - Search books by category\n\t5 - Search books written by one author\n\t6 - Exit\nOption: ");
+	printf("\t0 - Show command lines options\n\t1 - Show all the books\n\t2 - Show one book by ID\n\t3 - Modify the stock\n\t4 - Search books by category\n\t5 - Search books written by one author\n\t6 - Exit\nOption: ");
 	scanf("%d", &option);
 	switch (option){
+		case 0: 
+			printf("You can use the command line to use one part of the program writing:\n- Show all the books: ./program_name.out mostrar\n- Show one book by ID: ./program_name.out mostrar ID_number\n- Modify the stock of one book: ./program_name.out stock ID_number quantity_to_modify\n- Show books by category: ./program_name.out category category_number\n- Show books written by one author: ./program_name.out author name\n- Add one book to the library: ./program_name.out añadir\n");
+			break;
 		case 1:
 		// Muestro todo el catálogo //
 		    printf("All the books:\n");

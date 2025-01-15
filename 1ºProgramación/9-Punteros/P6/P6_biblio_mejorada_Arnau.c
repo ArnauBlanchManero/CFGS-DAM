@@ -32,6 +32,113 @@ typedef struct{
 
 // De numero a palabra y de palabra a número (categoria)
 
+int is_a_number(int number); // Copmrueba que sea un numero?
+
+void show_book(const Book const * one_book); // Le das una dirección de memoria y te imprime el libro que se encuentra allí
+
+void show_book_by_author(Book const * author_book, char * search_author, int author_size); // Le das la dirección de memoria del catálogo de libros, el nombre del autor y la longitud de su nombre.
+
+void show_book_by_category(Book const * first_book, int category_number); // Pongo la constante en el contenido del puntero porque me estáré moviendo entre las directiones de memoria pero no queiro modificar su contenido.
+
+Book * search_one_id(Book const * one_id, int id_number); // Es una función Book * porque devuelvo un puntero a Book.
+
+void modify_stock(const Book * book_stock, int another_id, int stock_quantity);
+
+void show_book_by_id(Book const * idbook);
+
+void show_n_books(Book const * n_books, int max); // Recibe la dirección de memoria en la que empieza el bucle y el número de vueltas que tiene que dar. 
+
+Book * add_book(Book * direction, int add_id, char * add_title, char * add_author, float add_price, int add_gender, int add_quantity);
+
+Book * pedir_libro(Book * direction_to_send);
+
+int show_P6(Book * book1);
+
+int main(int argc, char ** argv){ // int argumento_count, char ** argumento_value
+	printf("Welcome to the library!\n");
+	Book * books = (Book *) malloc(sizeof(Book));
+	// Titulo y autor tambien pueden ser memoria dinámica
+    books = add_book(books, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10);
+    books = add_book(books, 2, "1984", "George Orwell", 12.49, FICTION, 5);
+    books = add_book(books, 3, "The Great Gatsby", "F. Scott Fitzgerald", 10.99, FICTION, 8);
+    books = add_book(books, 4, "Moby Dick", "Herman Melville", 18.99, FICTION, 12);
+    books = add_book(books, 5, "War and Peace", "Leo Tolstoy", 20.00, FICTION, 7);
+    books = add_book(books, 6, "Pride and Prejudice", "Jane Austen", 14.99, FICTION, 9);
+    books = add_book(books, 7, "The Catcher in the Rye", "J.D. Salinger", 10.00, FICTION, 6);
+    books = add_book(books, 8, "The Odyssey", "Homer", 17.49, FICTION, 4);
+    books = add_book(books, 9, "Ulysses", "James Joyce", 25.00, FICTION, 2);
+    books = add_book(books, 10, "The Divine Comedy", "Dante Alighieri", 22.00, POETRY, 3);
+    books = add_book(books, 11, "Leaves of Grass", "Walt Whitman", 13.00, POETRY, 11);
+    books = add_book(books, 12, "The Iliad", "Homer", 18.50, FICTION, 7);
+    books = add_book(books, 13, "A Brief History of Time", "Stephen Hawking", 15.00, NON_FICTION, 15);
+    books = add_book(books, 14, "The Art of War", "Sun Tzu", 9.99, NON_FICTION, 20);
+    books = add_book(books, 15, "Sapiens: A Brief History of Humankind", "Yuval Noah Harari", 16.49, NON_FICTION, 13);
+    books = add_book(books, 16, "The Selfish Gene", "Richard Dawkins", 14.00, NON_FICTION, 6);
+    books = add_book(books, 17, "The Road to Serfdom", "F.A. Hayek", 10.50, NON_FICTION, 5);
+    books = add_book(books, 18, "The Wealth of Nations", "Adam Smith", 30.00, NON_FICTION, 8);
+    books = add_book(books, 19, "On the Origin of Species", "Charles Darwin", 24.99, NON_FICTION, 4);
+    books = add_book(books, 20, "The Prince", "Niccolò Machiavelli", 8.99, NON_FICTION, 14);
+    books = add_book(books, 21, "Hamlet", "William Shakespeare", 11.50, THEATER, 6);
+    books = add_book(books, 22, "Macbeth", "William Shakespeare", 9.50, THEATER, 8);
+    books = add_book(books, 23, "Othello", "William Shakespeare", 10.99, THEATER, 7);
+    books = add_book(books, 24, "A Doll's House", "Henrik Ibsen", 12.50, THEATER, 5);
+    books = add_book(books, 25, "Waiting for Godot", "Samuel Beckett", 13.99, THEATER, 4);
+    books = add_book(books, 26, "Death of a Salesman", "Arthur Miller", 14.99, THEATER, 10);
+    books = add_book(books, 27, "The Glass Menagerie", "Tennessee Williams", 11.00, THEATER, 9);
+    books = add_book(books, 28, "Long Day's Journey into Night", "Eugene O'Neill", 19.50, THEATER, 3);
+    books = add_book(books, 29, "The Importance of Being Earnest", "Oscar Wilde", 8.50, THEATER, 15);
+    books = add_book(books, 30, "The Waste Land", "T.S. Eliot", 6.99, POETRY, 10);
+    books = add_book(books, 31, "Paradise Lost", "John Milton", 12.00, POETRY, 7);
+    books = add_book(books, 32, "Beowulf", "Anonymous", 15.00, POETRY, 5);
+    books = add_book(books, 33, "Essays", "Michel de Montaigne", 20.00, ESSAY, 4);
+    books = add_book(books, 34, "Self-Reliance and Other Essays", "Ralph Waldo Emerson", 9.00, ESSAY, 9);
+    books = add_book(books, 35, "Civil Disobedience and Other Essays", "Henry David Thoreau", 7.50, ESSAY, 11);
+    books = add_book(books, 36, "Meditations", "Marcus Aurelius", 11.99, ESSAY, 8);
+    books = add_book(books, 37, "The Federalist Papers", "Alexander Hamilton, James Madison, John Jay", 18.00, ESSAY, 5);
+    books = add_book(books, 38, "The Communist Manifesto", "Karl Marx and Friedrich Engels", 5.99, ESSAY, 12);
+    books = add_book(books, 39, "The Republic", "Plato", 16.00, ESSAY, 6);
+    books = add_book(books, 40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10);
+
+	if (argc == 1){ // El primer argumento es el ejecutable .out
+		int exit = 0;
+		while (exit == 0){
+			exit = show_P6(&books[0]);
+		}
+	} else if (argc == 2){ // Puede que haya escrito mostar o añadir
+			if(strcmp(argv[1], "mostrar") == 0){
+				show_n_books(&books[0], books_quantity);
+			} else if (strcmp(argv[1], "añadir") == 0){
+				books = pedir_libro(books);
+				show_n_books(&books[0], books_quantity);
+			}
+	} else if (argc == 3){ // Hay que diferenciar entre mostrar, categoría o autor
+			if(strcmp(argv[1], "mostrar") == 0){
+				int id_mostar = atoi(argv[2]);
+				show_book(&books[id_mostar-1]);
+			} else if (strcmp(argv[1], "categoria") == 0){
+			    printf("1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\n");
+				int category_number_arg = atoi(argv[2]);
+			    show_book_by_category(&books[0], category_number_arg);
+			} else if (strcmp(argv[1], "autor") == 0){
+				int author_length_arg;
+				author_length_arg = strlen(argv[2])-1;
+				show_book_by_author(&books[0], argv[2], author_length_arg);
+			}
+	} else if (argc >= 4){
+			if(strcmp(argv[1], "stock") == 0){
+				int id_stock_arg = atoi(argv[2]);
+				int quantity_stock_arg = atoi(argv[3]);
+				modify_stock(&books[0], id_stock_arg, quantity_stock_arg);
+			}
+	}
+	free(books);
+	return EXIT_SUCCESS;
+}
+
+int is_a_number(int number){
+	// el scanf delvuelve la cantidad de conversiones correctas que ha hecho.
+}
+
 void show_book(const Book const * one_book){ //Sirve para mostrar toda la información del libro al que apunte la dirección de memoria que le pasan.
 	printf("ID: %d\n", one_book->id);
 	printf("\tTitle: %s\n", one_book->title);
@@ -91,6 +198,7 @@ void show_book_by_category(Book const * first_book, int category_number){ // Pon
 Book * search_one_id(Book const * one_id, int id_number){ // Es una función Book * porque devuelvo un puntero a Book.
 	if(id_number > books_quantity || id_number <= 0){ // Si no encuentro el id, muestro un mensaje de error.
     	printf("ERROR, it doesn't exist that id\n");
+    	exit(1);
     } else {
     	for (int i = 0; i < books_quantity; ++i){
 		    	if(id_number == one_id->id){ // También podría poner one_id[i].id si no incrementara después de cada vuelta.
@@ -216,85 +324,4 @@ int show_P6(Book * book1){
 			break;
 	}
 	return 0;
-}
-
-int main(int argc, char ** argv){ // int argumento_count, char ** argumento_value
-	printf("Welcome to the library!\n");
-	Book * books = (Book *) malloc(sizeof(Book));
-	// Titulo y autor tambien pueden ser memoria dinámica
-    books = add_book(books, 1, "To Kill a Mockingbird", "Harper Lee", 15.99, FICTION, 10);
-    books = add_book(books, 2, "1984", "George Orwell", 12.49, FICTION, 5);
-    books = add_book(books, 3, "The Great Gatsby", "F. Scott Fitzgerald", 10.99, FICTION, 8);
-    books = add_book(books, 4, "Moby Dick", "Herman Melville", 18.99, FICTION, 12);
-    books = add_book(books, 5, "War and Peace", "Leo Tolstoy", 20.00, FICTION, 7);
-    books = add_book(books, 6, "Pride and Prejudice", "Jane Austen", 14.99, FICTION, 9);
-    books = add_book(books, 7, "The Catcher in the Rye", "J.D. Salinger", 10.00, FICTION, 6);
-    books = add_book(books, 8, "The Odyssey", "Homer", 17.49, FICTION, 4);
-    books = add_book(books, 9, "Ulysses", "James Joyce", 25.00, FICTION, 2);
-    books = add_book(books, 10, "The Divine Comedy", "Dante Alighieri", 22.00, POETRY, 3);
-    books = add_book(books, 11, "Leaves of Grass", "Walt Whitman", 13.00, POETRY, 11);
-    books = add_book(books, 12, "The Iliad", "Homer", 18.50, FICTION, 7);
-    books = add_book(books, 13, "A Brief History of Time", "Stephen Hawking", 15.00, NON_FICTION, 15);
-    books = add_book(books, 14, "The Art of War", "Sun Tzu", 9.99, NON_FICTION, 20);
-    books = add_book(books, 15, "Sapiens: A Brief History of Humankind", "Yuval Noah Harari", 16.49, NON_FICTION, 13);
-    books = add_book(books, 16, "The Selfish Gene", "Richard Dawkins", 14.00, NON_FICTION, 6);
-    books = add_book(books, 17, "The Road to Serfdom", "F.A. Hayek", 10.50, NON_FICTION, 5);
-    books = add_book(books, 18, "The Wealth of Nations", "Adam Smith", 30.00, NON_FICTION, 8);
-    books = add_book(books, 19, "On the Origin of Species", "Charles Darwin", 24.99, NON_FICTION, 4);
-    books = add_book(books, 20, "The Prince", "Niccolò Machiavelli", 8.99, NON_FICTION, 14);
-    books = add_book(books, 21, "Hamlet", "William Shakespeare", 11.50, THEATER, 6);
-    books = add_book(books, 22, "Macbeth", "William Shakespeare", 9.50, THEATER, 8);
-    books = add_book(books, 23, "Othello", "William Shakespeare", 10.99, THEATER, 7);
-    books = add_book(books, 24, "A Doll's House", "Henrik Ibsen", 12.50, THEATER, 5);
-    books = add_book(books, 25, "Waiting for Godot", "Samuel Beckett", 13.99, THEATER, 4);
-    books = add_book(books, 26, "Death of a Salesman", "Arthur Miller", 14.99, THEATER, 10);
-    books = add_book(books, 27, "The Glass Menagerie", "Tennessee Williams", 11.00, THEATER, 9);
-    books = add_book(books, 28, "Long Day's Journey into Night", "Eugene O'Neill", 19.50, THEATER, 3);
-    books = add_book(books, 29, "The Importance of Being Earnest", "Oscar Wilde", 8.50, THEATER, 15);
-    books = add_book(books, 30, "The Waste Land", "T.S. Eliot", 6.99, POETRY, 10);
-    books = add_book(books, 31, "Paradise Lost", "John Milton", 12.00, POETRY, 7);
-    books = add_book(books, 32, "Beowulf", "Anonymous", 15.00, POETRY, 5);
-    books = add_book(books, 33, "Essays", "Michel de Montaigne", 20.00, ESSAY, 4);
-    books = add_book(books, 34, "Self-Reliance and Other Essays", "Ralph Waldo Emerson", 9.00, ESSAY, 9);
-    books = add_book(books, 35, "Civil Disobedience and Other Essays", "Henry David Thoreau", 7.50, ESSAY, 11);
-    books = add_book(books, 36, "Meditations", "Marcus Aurelius", 11.99, ESSAY, 8);
-    books = add_book(books, 37, "The Federalist Papers", "Alexander Hamilton, James Madison, John Jay", 18.00, ESSAY, 5);
-    books = add_book(books, 38, "The Communist Manifesto", "Karl Marx and Friedrich Engels", 5.99, ESSAY, 12);
-    books = add_book(books, 39, "The Republic", "Plato", 16.00, ESSAY, 6);
-    books = add_book(books, 40, "Thus Spoke Zarathustra", "Friedrich Nietzsche", 14.99, ESSAY, 10);
-
-	if (argc == 1){ // El primer argumento es el ejecutable .out
-		int exit = 0;
-		while (exit == 0){
-			exit = show_P6(&books[0]);
-		}
-	} else if (argc == 2){ // Puede que haya escrito mostar o añadir
-			if(strcmp(argv[1], "mostrar") == 0){
-				show_n_books(&books[0], books_quantity);
-			} else if (strcmp(argv[1], "añadir") == 0){
-				books = pedir_libro(books);
-				show_n_books(&books[0], books_quantity);
-			}
-	} else if (argc == 3){ // Hay que diferenciar entre mostrar, categoría o autor
-			if(strcmp(argv[1], "mostrar") == 0){
-				int id_mostar = atoi(argv[2]);
-				show_book(&books[id_mostar-1]);
-			} else if (strcmp(argv[1], "categoria") == 0){
-			    printf("1 -> FICCTION\n2 -> NON_FICTION\n3 -> POETRY\n4 -> THEATER\n5 -> ESSAY\n");
-				int category_number_arg = atoi(argv[2]);
-			    show_book_by_category(&books[0], category_number_arg);
-			} else if (strcmp(argv[1], "autor") == 0){
-				int author_length_arg;
-				author_length_arg = strlen(argv[2])-1;
-				show_book_by_author(&books[0], argv[2], author_length_arg);
-			}
-	} else if (argc >= 4){
-			if(strcmp(argv[1], "stock") == 0){
-				int id_stock_arg = atoi(argv[2]);
-				int quantity_stock_arg = atoi(argv[3]);
-				modify_stock(&books[0], id_stock_arg, quantity_stock_arg);
-			}
-	}
-	free(books);
-	return EXIT_SUCCESS;
 }

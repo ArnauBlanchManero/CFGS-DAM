@@ -1,4 +1,4 @@
-INFO: El sistema ha iniciado correctamente.
+INFO: El sistema ha iniciado correctamente.INFO
 ERROR: No se pudo conectar con la base de datos.
 DEBUG: Variable 'x' no inicializada.
 INFO: La tarea finalizó exitosamente.

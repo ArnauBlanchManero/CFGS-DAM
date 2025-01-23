@@ -1,0 +1,5 @@
+Línea 1 con error
+Línea 2 con error
+Línea 3 con error
+Línea 4 con error
+Línea 5 con error

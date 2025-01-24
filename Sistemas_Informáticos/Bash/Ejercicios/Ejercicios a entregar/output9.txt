@@ -1,0 +1,4 @@
+INICIO: Una línea 1
+INICIO: Otra línea 2
+INICIO: Ejemplo línea 3
+INICIO: Otra línea 4

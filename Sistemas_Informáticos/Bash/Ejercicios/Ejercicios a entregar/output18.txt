@@ -1,0 +1,320 @@
+file1.txt:Línea 1 con error
+file1.txt:Línea 2 con error
+file1.txt:Línea 3 con error
+file1.txt:Línea 4 con error
+file1.txt:Línea 5 con error
+file1.txt:Línea 6 con error
+file1.txt:Línea 7 con error
+file1.txt:Línea 8 con error
+file1.txt:Línea 9 con error
+file1.txt:Línea 11 con error
+file1.txt:Línea 12 con error
+file1.txt:Línea 13 con error
+file1.txt:Línea 14 con error
+file1.txt:Línea 15 con error
+file1.txt:Línea 16 con error
+file1.txt:Línea 17 con error
+file1.txt:Línea 18 con error
+file1.txt:Línea 19 con error
+file1.txt:Línea 21 con error
+file1.txt:Línea 22 con error
+file1.txt:Línea 23 con error
+file1.txt:Línea 24 con error
+file1.txt:Línea 25 con error
+file1.txt:Línea 26 con error
+file1.txt:Línea 27 con error
+file1.txt:Línea 28 con error
+file1.txt:Línea 29 con error
+file1.txt:Línea 31 con error
+file1.txt:Línea 32 con error
+file1.txt:Línea 33 con error
+file1.txt:Línea 34 con error
+file1.txt:Línea 35 con error
+file1.txt:Línea 36 con error
+file1.txt:Línea 37 con error
+file1.txt:Línea 38 con error
+file1.txt:Línea 39 con error
+file1.txt:Línea 41 con error
+file1.txt:Línea 42 con error
+file1.txt:Línea 43 con error
+file1.txt:Línea 44 con error
+file1.txt:Línea 45 con error
+file1.txt:Línea 46 con error
+file1.txt:Línea 47 con error
+file1.txt:Línea 48 con error
+file1.txt:Línea 49 con error
+output1.txt:Línea 1 con error
+output1.txt:Línea 2 con error
+output1.txt:Línea 3 con error
+output1.txt:Línea 4 con error
+output1.txt:Línea 5 con error
+output1.txt:Línea 6 con error
+output1.txt:Línea 7 con error
+output1.txt:Línea 8 con error
+output1.txt:Línea 9 con error
+output1.txt:Línea 11 con error
+output1.txt:Línea 12 con error
+output1.txt:Línea 13 con error
+output1.txt:Línea 14 con error
+output1.txt:Línea 15 con error
+output1.txt:Línea 16 con error
+output1.txt:Línea 17 con error
+output1.txt:Línea 18 con error
+output1.txt:Línea 19 con error
+output1.txt:Línea 21 con error
+output1.txt:Línea 22 con error
+output1.txt:Línea 23 con error
+output1.txt:Línea 24 con error
+output1.txt:Línea 25 con error
+output1.txt:Línea 26 con error
+output1.txt:Línea 27 con error
+output1.txt:Línea 28 con error
+output1.txt:Línea 29 con error
+output1.txt:Línea 31 con error
+output1.txt:Línea 32 con error
+output1.txt:Línea 33 con error
+output1.txt:Línea 34 con error
+output1.txt:Línea 35 con error
+output1.txt:Línea 36 con error
+output1.txt:Línea 37 con error
+output1.txt:Línea 38 con error
+output1.txt:Línea 39 con error
+output1.txt:Línea 41 con error
+output1.txt:Línea 42 con error
+output1.txt:Línea 43 con error
+output1.txt:Línea 44 con error
+output1.txt:Línea 45 con error
+output1.txt:Línea 46 con error
+output1.txt:Línea 47 con error
+output1.txt:Línea 48 con error
+output1.txt:Línea 49 con error
+output14.txt:Línea 1 con error
+output14.txt:Línea 2 con error
+output14.txt:Línea 3 con error
+output14.txt:Línea 4 con error
+output14.txt:Línea 5 con error
+output14.txt:Línea 6 con error
+output14.txt:Línea 7 con error
+output14.txt:Línea 8 con error
+output14.txt:Línea 9 con error
+output14.txt:Línea 11 con error
+output14.txt:Línea 12 con error
+output14.txt:Línea 13 con error
+output14.txt:Línea 14 con error
+output14.txt:Línea 15 con error
+output14.txt:Línea 16 con error
+output14.txt:Línea 17 con error
+output14.txt:Línea 18 con error
+output14.txt:Línea 19 con error
+output14.txt:Línea 21 con error
+output14.txt:Línea 22 con error
+output14.txt:Línea 23 con error
+output14.txt:Línea 24 con error
+output14.txt:Línea 25 con error
+output14.txt:Línea 26 con error
+output14.txt:Línea 27 con error
+output14.txt:Línea 28 con error
+output14.txt:Línea 29 con error
+output14.txt:Línea 31 con error
+output14.txt:Línea 32 con error
+output14.txt:Línea 33 con error
+output14.txt:Línea 34 con error
+output14.txt:Línea 35 con error
+output14.txt:Línea 36 con error
+output14.txt:Línea 37 con error
+output14.txt:Línea 38 con error
+output14.txt:Línea 39 con error
+output14.txt:Línea 41 con error
+output14.txt:Línea 42 con error
+output14.txt:Línea 43 con error
+output14.txt:Línea 44 con error
+output14.txt:Línea 45 con error
+output14.txt:Línea 46 con error
+output14.txt:Línea 47 con error
+output14.txt:Línea 48 con error
+output14.txt:Línea 49 con error
+output16.txt:MODIFICADO: Línea 1 con error
+output16.txt:MODIFICADO: Línea 2 con error
+output16.txt:MODIFICADO: Línea 3 con error
+output16.txt:MODIFICADO: Línea 4 con error
+output16.txt:MODIFICADO: Línea 5 con error
+output16.txt:MODIFICADO: Línea 6 con error
+output16.txt:MODIFICADO: Línea 7 con error
+output16.txt:MODIFICADO: Línea 8 con error
+output16.txt:MODIFICADO: Línea 9 con error
+output16.txt:MODIFICADO: Línea 11 con error
+output16.txt:MODIFICADO: Línea 12 con error
+output16.txt:MODIFICADO: Línea 13 con error
+output16.txt:MODIFICADO: Línea 14 con error
+output16.txt:MODIFICADO: Línea 15 con error
+output16.txt:MODIFICADO: Línea 16 con error
+output16.txt:MODIFICADO: Línea 17 con error
+output16.txt:MODIFICADO: Línea 18 con error
+output16.txt:MODIFICADO: Línea 19 con error
+output16.txt:MODIFICADO: Línea 21 con error
+output16.txt:MODIFICADO: Línea 22 con error
+output16.txt:MODIFICADO: Línea 23 con error
+output16.txt:MODIFICADO: Línea 24 con error
+output16.txt:MODIFICADO: Línea 25 con error
+output16.txt:MODIFICADO: Línea 26 con error
+output16.txt:MODIFICADO: Línea 27 con error
+output16.txt:MODIFICADO: Línea 28 con error
+output16.txt:MODIFICADO: Línea 29 con error
+output16.txt:MODIFICADO: Línea 31 con error
+output16.txt:MODIFICADO: Línea 32 con error
+output16.txt:MODIFICADO: Línea 33 con error
+output16.txt:MODIFICADO: Línea 34 con error
+output16.txt:MODIFICADO: Línea 35 con error
+output16.txt:MODIFICADO: Línea 36 con error
+output16.txt:MODIFICADO: Línea 37 con error
+output16.txt:MODIFICADO: Línea 38 con error
+output16.txt:MODIFICADO: Línea 39 con error
+output16.txt:MODIFICADO: Línea 41 con error
+output16.txt:MODIFICADO: Línea 42 con error
+output16.txt:MODIFICADO: Línea 43 con error
+output16.txt:MODIFICADO: Línea 44 con error
+output16.txt:MODIFICADO: Línea 45 con error
+output16.txt:MODIFICADO: Línea 46 con error
+output16.txt:MODIFICADO: Línea 47 con error
+output16.txt:MODIFICADO: Línea 48 con error
+output16.txt:MODIFICADO: Línea 49 con error
+output2.txt:Línea 1 con error
+output2.txt:Línea 2 con error
+output2.txt:Línea 3 con error
+output2.txt:Línea 4 con error
+output2.txt:Línea 5 con error
+output2.txt:Línea 6 con error
+output2.txt:Línea 7 con error
+output2.txt:Línea 8 con error
+output2.txt:Línea 9 con error
+output2.txt:Línea 11 con error
+output2.txt:Línea 12 con error
+output2.txt:Línea 13 con error
+output2.txt:Línea 14 con error
+output2.txt:Línea 15 con error
+output2.txt:Línea 16 con error
+output2.txt:Línea 17 con error
+output2.txt:Línea 18 con error
+output2.txt:Línea 19 con error
+output2.txt:Línea 21 con error
+output2.txt:Línea 22 con error
+output2.txt:Línea 23 con error
+output2.txt:Línea 24 con error
+output2.txt:Línea 25 con error
+output2.txt:Línea 26 con error
+output2.txt:Línea 27 con error
+output2.txt:Línea 28 con error
+output2.txt:Línea 29 con error
+output2.txt:Línea 31 con error
+output2.txt:Línea 32 con error
+output2.txt:Línea 33 con error
+output2.txt:Línea 34 con error
+output2.txt:Línea 35 con error
+output2.txt:Línea 36 con error
+output2.txt:Línea 37 con error
+output2.txt:Línea 38 con error
+output2.txt:Línea 39 con error
+output2.txt:Línea 41 con error
+output2.txt:Línea 42 con error
+output2.txt:Línea 43 con error
+output2.txt:Línea 44 con error
+output2.txt:Línea 45 con error
+output2.txt:Línea 46 con error
+output2.txt:Línea 47 con error
+output2.txt:Línea 48 con error
+output2.txt:Línea 49 con error
+output3.txt:Línea 1 con error
+output3.txt:Línea 2 con error
+output3.txt:Línea 3 con error
+output3.txt:Línea 4 con error
+output3.txt:Línea 5 con error
+output5.txt:Línea 1 con error
+output5.txt:Línea 11 con error
+output5.txt:Línea 12 con error
+output5.txt:Línea 13 con error
+output5.txt:Línea 14 con error
+output5.txt:Línea 15 con error
+output5.txt:Línea 16 con error
+output5.txt:Línea 17 con error
+output5.txt:Línea 18 con error
+output5.txt:Línea 19 con error
+output5.txt:Línea 2 con error
+output5.txt:Línea 21 con error
+output5.txt:Línea 22 con error
+output5.txt:Línea 23 con error
+output5.txt:Línea 24 con error
+output5.txt:Línea 25 con error
+output5.txt:Línea 26 con error
+output5.txt:Línea 27 con error
+output5.txt:Línea 28 con error
+output5.txt:Línea 29 con error
+output5.txt:Línea 3 con error
+output5.txt:Línea 31 con error
+output5.txt:Línea 32 con error
+output5.txt:Línea 33 con error
+output5.txt:Línea 34 con error
+output5.txt:Línea 35 con error
+output5.txt:Línea 36 con error
+output5.txt:Línea 37 con error
+output5.txt:Línea 38 con error
+output5.txt:Línea 39 con error
+output5.txt:Línea 4 con error
+output5.txt:Línea 41 con error
+output5.txt:Línea 42 con error
+output5.txt:Línea 43 con error
+output5.txt:Línea 44 con error
+output5.txt:Línea 45 con error
+output5.txt:Línea 46 con error
+output5.txt:Línea 47 con error
+output5.txt:Línea 48 con error
+output5.txt:Línea 49 con error
+output5.txt:Línea 5 con error
+output5.txt:Línea 6 con error
+output5.txt:Línea 7 con error
+output5.txt:Línea 8 con error
+output5.txt:Línea 9 con error
+subdir1/file_in_subdir1_error.txt:Línea 1 con error
+subdir1/file_in_subdir1_error.txt:Línea 2 con error
+subdir1/file_in_subdir1_error.txt:Línea 3 con error
+subdir1/file_in_subdir1_error.txt:Línea 4 con error
+subdir1/file_in_subdir1_error.txt:Línea 5 con error
+subdir1/file_in_subdir1_error.txt:Línea 6 con error
+subdir1/file_in_subdir1_error.txt:Línea 7 con error
+subdir1/file_in_subdir1_error.txt:Línea 8 con error
+subdir1/file_in_subdir1_error.txt:Línea 9 con error
+subdir1/file_in_subdir1_error.txt:Línea 11 con error
+subdir1/file_in_subdir1_error.txt:Línea 12 con error
+subdir1/file_in_subdir1_error.txt:Línea 13 con error
+subdir1/file_in_subdir1_error.txt:Línea 14 con error
+subdir1/file_in_subdir1_error.txt:Línea 15 con error
+subdir1/file_in_subdir1_error.txt:Línea 16 con error
+subdir1/file_in_subdir1_error.txt:Línea 17 con error
+subdir1/file_in_subdir1_error.txt:Línea 18 con error
+subdir1/file_in_subdir1_error.txt:Línea 19 con error
+subdir1/file_in_subdir1_error.txt:Línea 21 con error
+subdir1/file_in_subdir1_error.txt:Línea 22 con error
+subdir1/file_in_subdir1_error.txt:Línea 23 con error
+subdir1/file_in_subdir1_error.txt:Línea 24 con error
+subdir1/file_in_subdir1_error.txt:Línea 25 con error
+subdir1/file_in_subdir1_error.txt:Línea 26 con error
+subdir1/file_in_subdir1_error.txt:Línea 27 con error
+subdir1/file_in_subdir1_error.txt:Línea 28 con error
+subdir1/file_in_subdir1_error.txt:Línea 29 con error
+subdir1/file_in_subdir1_error.txt:Línea 31 con error
+subdir1/file_in_subdir1_error.txt:Línea 32 con error
+subdir1/file_in_subdir1_error.txt:Línea 33 con error
+subdir1/file_in_subdir1_error.txt:Línea 34 con error
+subdir1/file_in_subdir1_error.txt:Línea 35 con error
+subdir1/file_in_subdir1_error.txt:Línea 36 con error
+subdir1/file_in_subdir1_error.txt:Línea 37 con error
+subdir1/file_in_subdir1_error.txt:Línea 38 con error
+subdir1/file_in_subdir1_error.txt:Línea 39 con error
+subdir1/file_in_subdir1_error.txt:Línea 41 con error
+subdir1/file_in_subdir1_error.txt:Línea 42 con error
+subdir1/file_in_subdir1_error.txt:Línea 43 con error
+subdir1/file_in_subdir1_error.txt:Línea 44 con error
+subdir1/file_in_subdir1_error.txt:Línea 45 con error
+subdir1/file_in_subdir1_error.txt:Línea 46 con error
+subdir1/file_in_subdir1_error.txt:Línea 47 con error
+subdir1/file_in_subdir1_error.txt:Línea 48 con error
+subdir1/file_in_subdir1_error.txt:Línea 49 con error

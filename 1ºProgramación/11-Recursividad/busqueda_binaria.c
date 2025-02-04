@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+	Autor: Arnau Blanch
+*/
+
 int busqueda_binaria(int * array, int n, int ini, int fin){
 	int cantidad = fin - ini + 1;
 	if (cantidad <= 2){

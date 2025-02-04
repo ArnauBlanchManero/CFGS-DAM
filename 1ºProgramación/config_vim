@@ -28,3 +28,5 @@ set number relativenumber
 " Que te muestre la línea en la que estás
 set nu rnu
 
+" Cambiar los colores
+colorscheme pablo

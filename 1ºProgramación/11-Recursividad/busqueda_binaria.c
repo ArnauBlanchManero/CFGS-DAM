@@ -3,22 +3,22 @@
 
 int busqueda_binaria(int * array, int n, int ini, int fin){
 	int cantidad = fin - ini + 1;
-	if (cantidad <= 1){
-		if (n == array[ini]){
+	if (cantidad <= 2){
+		if (n == array[ini-1]){
+			return 1;
+		} else if (n == array[fin-1]){
 			return 1;
 		} else {
 			return 0;
 		}
 	}
-	int mitad = (ini+fin)/2;
-	if (n > mitad){
+	int mitad = (ini+fin+1)/2;
+	if (n >= array[mitad-1]){
 		ini = mitad;
-	} else if (n < mitad){
+	} else if (n <= array[mitad-1]){
 		fin = mitad;
 	}
-	// todoes: me falta guardar el valor en una variable.
-	busqueda_binaria(array, n, ini, fin);
-	return 0;
+	return busqueda_binaria(array, n, ini, fin);
 }
 
 int main(){
@@ -28,7 +28,7 @@ int main(){
 	printf("Escribe el número que quieres buscar dentro de mi array: ");
 	scanf("%d", &a_buscar);
 	int encontrado = busqueda_binaria(arr, a_buscar, 0, 9);
-	if(!encontrado){
+	if(encontrado){
 		printf("He encontrado el número %d en el array.\n", a_buscar);
 	} else{
 		printf("No he encontrado el número %d en el array.\n", a_buscar);

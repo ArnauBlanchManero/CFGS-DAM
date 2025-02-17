@@ -25,7 +25,7 @@ int main(){
 }
 
 void guardar_vocales(char * origen, char ** destino, int posicion){
-	if (origen[0] == '\n'){
+	if (origen[0] == '\0'){
 		return;
 	}
 	if (esVocal(origen[0])){

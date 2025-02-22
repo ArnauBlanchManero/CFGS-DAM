@@ -6723,6 +6723,9 @@
     .vh-100{
     height:100vh!important
     }
+    .vh-20{
+    height:20vh!important
+    }
     .min-vh-100{
     min-height:100vh!important
     }

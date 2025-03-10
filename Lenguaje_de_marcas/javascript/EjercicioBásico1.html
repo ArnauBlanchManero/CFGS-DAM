@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.1 EJERCICIOS BÁSICOS DE JAVASCRIPT</title>
+    <script>
+        alert("Hello World");
+        document.write("Hello World");
+        console.log(3+5);
+        let nombre = prompt("Escribe tu nombre de usuario");
+        alert("Hola " + nombre);
+        let num1 = prompt("Dime un número a sumar");
+        let num2 = prompt("Dime otro número a sumar");
+        let resultado = parseInt(num1) + parseInt(num2);
+        console.log("La suma es " + resultado);
+        let numero1 = prompt("Dime un número");
+        let numero2 = prompt("Dime otro número y te diré cuál es mayor");
+        let mayor = "Son iguales";
+        if (numero1 > numero2){
+            mayor = "El mayor es " + numero1;
+        }
+        if (numero2 > numero1){
+            mayor = "El mayor es " + numero2;
+        }
+        console.log(mayor);
+        let n1 = prompt("Dime el primer nímero");
+        let n2 = prompt("Dime el segundo número");
+        let n3 = prompt("Dime el tercer número y te diré cuál es mayor");
+        let mayor3 = "Son iguales";
+        if (n1 >= n2 && n1 >= n3){
+            mayor3 = "El mayor es " + n1;
+        }
+        if (n2 >= n1 && n2 >= n3){
+            mayor3 = "El mayor es " + n2;
+        }
+        if (n3 >= n1 && n3 >= n2){
+            mayor3 = "El mayor es " + n3;
+        }
+        console.log(mayor3);
+        let num = prompt("Dime un número y te diré si es divisible entre 2");
+        if(parseInt(num) % 2 == 0){
+            console.log("Efectivamente, " + num + " es divisible entre 2")
+        } else {
+            console.log(num + " no es divisible entre 2");
+        }
+        let frase = prompt("Escribe una frase");
+        let longitud = frase.length;
+        let cuentaA = 0;
+        for(let i = 0; i<longitud; i++){
+            if (frase[i] == 'a' || frase[i] == 'A'){
+                cuentaA++;
+            }
+        }
+        console.log("Hay " + cuentaA + " 'a' en la frase");
+    </script>
+</head>
+<body>
+    <ol>
+        <li>Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.</li>
+        <li>Escribe un programa de una sola línea que escriba en la pantalla un texto que diga “Hello World” (document.write).</li>
+        <li>Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.</li>
+        <li>Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”.</li>
+        <li>Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números.</li>
+        <li>Escribe un programa que pida dos números y escriba en la pantalla cuál es el mayor.</li>
+        <li>Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.</li>
+        <li>Escribe un programa que pida un número y diga si es divisible por 2.</li>
+        <li>Escribe un programa que pida una frase y escriba cuántas veces aparece la letra "a".</li>
+        <li>Escribe un programa que pida una frase y escriba las vocales que aparecen.</li>
+        <li>Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales.</li>
+        <li>Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales.</li>
+        <li>Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro).</li>
+        <li>Añadir al ejercicio anterior que nos diga por cuál de los cuatro es divisible (hay que decir todos por los que es divisible).</li>
+        <li>Escribir un programa que escriba en pantalla los divisores de un número dado.</li>
+        <li>Escribir un programa que escriba en pantalla los divisores comunes de dos números dados.</li>
+        <li>Escribir un programa que nos diga si un número dado es primo (no es divisible por ningún otro número que no sea él mismo o la unidad).</li>
+    </ol>
+    
+</body>
+</html>

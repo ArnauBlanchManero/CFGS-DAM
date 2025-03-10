@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>JavaScript Ejemplo 1</title>
+		<script>
+				let texto = "Hola"
+				alert(texto + " mundo");
+				let nombre = prompt("¿Cómo te llamas?", "Arnau"); // Puedes introducir texto
+				alert(texto + " " + nombre);
+				let mayor = confirm("¿Eres mayor de edad?"); //Devuelve true o false
+				if (mayor){
+					console.log("¡Bienvenido!");
+				} else {
+					console.log("No puedes visitar la página");
+				}
+				document.write("<h2>JavaScript 1</h2>");
+				let a = prompt("Escribe un número a sumar", "10");
+				let b = 2;
+				let resultado = parseInt(a)+b;
+				console.log(resultado);
+				i=0;
+				while(i<parseInt(a)){
+					let row = "";
+					for(let j = 0; j<i; j++){
+						row += "*";
+					}
+					console.log(row);
+					i++;
+				}
+		</script>
+	</head>
+	<body>
+		<div>
+			<p id="saludo">Esta página te saluda</p>
+		</div>
+		<div>
+			<p id="borra">Y luego escribe el título</p>
+		</div>
+	</body>
+</html>

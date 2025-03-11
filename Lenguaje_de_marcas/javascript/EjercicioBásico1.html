@@ -40,11 +40,11 @@
         console.log(mayor3);
         let num = prompt("Dime un número y te diré si es divisible entre 2");
         if(parseInt(num) % 2 == 0){
-            console.log("Efectivamente, " + num + " es divisible entre 2")
+            console.log("Efectivamente, " + num + " es divisible entre 2");
         } else {
             console.log(num + " no es divisible entre 2");
         }
-        let frase = prompt("Escribe una frase");
+        let frase = prompt("Escribe una frase y te cuento las 'a'");
         let longitud = frase.length;
         let cuentaA = 0;
         for(let i = 0; i<longitud; i++){
@@ -53,6 +53,114 @@
             }
         }
         console.log("Hay " + cuentaA + " 'a' en la frase");
+        let frase2 = prompt("Escribe otra frase y te escribo sus vocales");
+        let longitud2 = frase2.length;
+        let frasereturn = "";
+        for(let i = 0; i<longitud2; i++){
+            if(frase2[i] == 'a' || frase2[i] == 'e' || frase2[i] == 'i' || frase2[i] == 'o' || frase2[i] == 'u' || frase2[i] == 'A' || frase2[i] == 'E' || frase2[i] == 'I' || frase2[i] == 'O' || frase2[i] == 'U'){
+                frasereturn += frase2[i];
+            }
+        }
+        console.log(frasereturn);
+        let frase3 = prompt("Escribe otra frase y cuento las vocales");
+        let longitud3 = frase3.length;
+        let cuentavocales = 0;
+        for(let i = 0; i<longitud3; i++){
+            if(frase3[i] == 'a' || frase3[i] == 'e' || frase3[i] == 'i' || frase3[i] == 'o' || frase3[i] == 'u' || frase3[i] == 'A' || frase3[i] == 'E' || frase3[i] == 'I' || frase3[i] == 'O' || frase3[i] == 'U'){
+                cuentavocales++;
+            }
+        }
+        console.log("Hay " + cuentavocales + " vocales");
+        let frase4 = prompt("Escribe otra frase y cuento cada una de las vocales");
+        let longitud4 = frase4.length;
+        let a = 0;
+        let e = 0;
+        let i = 0;
+        let o = 0;
+        let u = 0;
+        for(let j = 0; j<longitud3; j++){
+            switch(frase4[j]){
+                case 'a':
+                case 'A':
+                    a++;
+                    break;
+                case 'e':
+                case 'E':
+                    e++;
+                    break;
+                case 'i':
+                case 'I':
+                    i++;
+                    break;
+                case 'o':
+                case 'O':
+                    o++;
+                    break;
+                case 'u':
+                case 'U':
+                    u++;
+                    break;
+                default:
+                    break;
+            }
+        }
+        console.log("Hay " + a + " 'a', " + e + " 'e', " + i + " 'i', " + o + " 'o' y " + u + " 'u'");
+        let numdiv = prompt("Dime un número y te diré si es divisible entre 2, 3, 5 o 7");
+        if(parseInt(numdiv) % 2 == 0 || parseInt(numdiv) % 3 == 0 || parseInt(numdiv) % 5 == 0 || parseInt(numdiv) % 7 == 0){
+            console.log("Sí, " + numdiv + " es divisible entre 2, 3, 5 o 7.")
+        } else {
+            console.log(numdev + " no es divisible entre 2, 3, 5 ni 7");
+        }
+        if(parseInt(numdiv) % 2 == 0){
+            console.log(numdiv + " es divisible entre 2" + '\n');
+        } 
+        if(parseInt(numdiv) % 3 == 0){
+            console.log(numdiv + " es divisible entre 3" + '\n');
+        }
+        if(parseInt(numdiv) % 5 == 0){
+            console.log(numdiv + " es divisible entre 5" + '\n');
+        }
+        if(parseInt(numdiv) % 7 == 0){
+            console.log(numdiv + " es divisible entre 7" + '\n');
+        }
+        let divnum = prompt("Dime otro número y te digo sus divisores");
+        let ndivisores = "Divisores de " + divnum + ": ";
+        for(let i = 0; i<parseInt(divnum); i++){
+            if(parseInt(divnum) % i == 0){
+                ndivisores += i + ", "
+            }
+        }
+        ndivisores += "y " + divnum;
+        console.log(ndivisores);
+        let divnumcomun1 = prompt("Dime el primer número");
+        let divnumcomun2 = prompt("Dime el segundo número y te digo sus divisores comunes");
+        let ndivisorescomunes = "Divisores de " + divnumcomun1 + "y de " + divnumcomun2 + ": 1";
+        let min;
+        if(divnumcomun1 > divnumcomun2){
+            min = parseInt(divnumcomun2)
+        } else {
+            min = parseInt(divnumcomun1)
+        }
+        for(let i = 2; i<=min; i++){
+            if(parseInt(divnumcomun1) % i == 0 && parseInt(divnumcomun2) % i == 0){
+                ndivisorescomunes += ", " + i;
+            }
+        }
+        ndivisorescomunes += ".";
+        console.log(ndivisorescomunes);
+        let numprimo = prompt("Dime un número y te digo si es primo o no");
+        let esPrimo = true;
+        for(let i = 2; i<parseInt(numprimo); i++){
+            if(parseInt(numprimo) % i == 0){
+                esPrimo = false;
+            }
+        }
+        if(esPrimo){
+            console.log(numprimo + " es un número primo.");
+        } else {
+            console.log(numprimo + " no es un número primo.");
+        }
+        alert("Mira la consola (están las soluciones)");
     </script>
 </head>
 <body>

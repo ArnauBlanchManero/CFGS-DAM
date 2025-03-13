@@ -1,2 +1,0 @@
-Si el resultado es una variable de tipo char, te muestra la letra correspondiente al número ASCII, por ejemplo, a + 1 = b.
-En cambio si el resultado es una variable de tipo int, te muestra el número correspondiente a la letra ASCII, por ejemplo, a + 2 = 99.

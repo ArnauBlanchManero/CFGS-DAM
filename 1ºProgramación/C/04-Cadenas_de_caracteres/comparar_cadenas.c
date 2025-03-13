@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*
+ * 	Autor: Arnau Blanch
+ *	
+ *	Haz un código que defina dos cadenas de caracteres que contengan la misma palabra y haz comparaciones.
+ */
+
+int main(){
+	char palabra1[7]="sandia";
+	char palabra2[7]="sandia";
+	int i;
+	printf("La palabra1 es '%s' y la palabra2 es '%s'\n", palabra1, palabra2);
+
+	if (palabra1 == palabra2)
+		printf("Las dos palabras son iguales\n");
+
+	if (palabra1 != palabra2)
+		printf("Las palabras no son iguales\n"); // Imprime esto porque almacena la dirección de memoria donde empieza el array.
+
+	if (palabra1 > palabra2)
+		printf("palabra1 es mayor que palabra2\n");
+
+	if (palabra1 < palabra2)
+		printf("palabra2 es mayor que palabra1\n");
+
+	for (i=0; i < 7; i++){
+		if (palabra1[i] == palabra2[i]){
+			printf("El caracter %d de las palabras es igual (%c = %c)\n", i, palabra1[i], palabra2[i]);
+		}
+	}
+	printf("Voy a comparar con las funciones del include strings.h\n");
+	if (strcmp(palabra1, palabra2) == 0)
+		printf("Son iguales\n");
+	else 
+		printf("Son diferentes\n");
+	return EXIT_SUCCESS;
+}

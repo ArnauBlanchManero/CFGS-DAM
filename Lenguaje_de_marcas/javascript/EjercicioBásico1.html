@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03.1 EJERCICIOS BÁSICOS DE JAVASCRIPT</title>
     <script>
+        // Ejercicio 1
         alert("Hello World");
+        // Ejercicio 2
         document.write("Hello World");
+        // Ejercicio 3
         console.log(3+5);
+        // Ejercicio 4
         let nombre = prompt("Escribe tu nombre de usuario");
         alert("Hola " + nombre);
+        // Ejercicio 5
         let num1 = prompt("Dime un número a sumar");
         let num2 = prompt("Dime otro número a sumar");
         let resultado = parseInt(num1) + parseInt(num2);
         console.log("La suma es " + resultado);
+        // Ejercicio 6
         let numero1 = prompt("Dime un número");
         let numero2 = prompt("Dime otro número y te diré cuál es mayor");
         let mayor = "Son iguales";
@@ -24,6 +30,7 @@
             mayor = "El mayor es " + numero2;
         }
         console.log(mayor);
+        // Ejercicio 7
         let n1 = prompt("Dime el primer nímero");
         let n2 = prompt("Dime el segundo número");
         let n3 = prompt("Dime el tercer número y te diré cuál es mayor");
@@ -38,12 +45,14 @@
             mayor3 = "El mayor es " + n3;
         }
         console.log(mayor3);
+        // Ejercicio 8
         let num = prompt("Dime un número y te diré si es divisible entre 2");
         if(parseInt(num) % 2 == 0){
             console.log("Efectivamente, " + num + " es divisible entre 2");
         } else {
             console.log(num + " no es divisible entre 2");
         }
+        // Ejercicio 9
         let frase = prompt("Escribe una frase y te cuento las 'a'");
         let longitud = frase.length;
         let cuentaA = 0;
@@ -53,6 +62,7 @@
             }
         }
         console.log("Hay " + cuentaA + " 'a' en la frase");
+        // Ejercicio 10
         let frase2 = prompt("Escribe otra frase y te escribo sus vocales");
         let longitud2 = frase2.length;
         let frasereturn = "";
@@ -62,6 +72,7 @@
             }
         }
         console.log(frasereturn);
+        // Ejercicio 11
         let frase3 = prompt("Escribe otra frase y cuento las vocales");
         let longitud3 = frase3.length;
         let cuentavocales = 0;
@@ -71,6 +82,7 @@
             }
         }
         console.log("Hay " + cuentavocales + " vocales");
+        // Ejercicio 12
         let frase4 = prompt("Escribe otra frase y cuento cada una de las vocales");
         let longitud4 = frase4.length;
         let a = 0;
@@ -105,12 +117,14 @@
             }
         }
         console.log("Hay " + a + " 'a', " + e + " 'e', " + i + " 'i', " + o + " 'o' y " + u + " 'u'");
+        // Ejercicio 13
         let numdiv = prompt("Dime un número y te diré si es divisible entre 2, 3, 5 o 7");
         if(parseInt(numdiv) % 2 == 0 || parseInt(numdiv) % 3 == 0 || parseInt(numdiv) % 5 == 0 || parseInt(numdiv) % 7 == 0){
             console.log("Sí, " + numdiv + " es divisible entre 2, 3, 5 o 7.")
         } else {
             console.log(numdev + " no es divisible entre 2, 3, 5 ni 7");
         }
+        // Ejercicio 14
         if(parseInt(numdiv) % 2 == 0){
             console.log(numdiv + " es divisible entre 2" + '\n');
         } 
@@ -123,6 +137,7 @@
         if(parseInt(numdiv) % 7 == 0){
             console.log(numdiv + " es divisible entre 7" + '\n');
         }
+        // Ejercicio 15
         let divnum = prompt("Dime otro número y te digo sus divisores");
         let ndivisores = "Divisores de " + divnum + ": ";
         for(let i = 0; i<parseInt(divnum); i++){
@@ -132,6 +147,7 @@
         }
         ndivisores += "y " + divnum;
         console.log(ndivisores);
+        // Ejercicio 16
         let divnumcomun1 = prompt("Dime el primer número");
         let divnumcomun2 = prompt("Dime el segundo número y te digo sus divisores comunes");
         let ndivisorescomunes = "Divisores de " + divnumcomun1 + "y de " + divnumcomun2 + ": 1";
@@ -148,6 +164,7 @@
         }
         ndivisorescomunes += ".";
         console.log(ndivisorescomunes);
+        // Ejercicio 17
         let numprimo = prompt("Dime un número y te digo si es primo o no");
         let esPrimo = true;
         for(let i = 2; i<parseInt(numprimo); i++){

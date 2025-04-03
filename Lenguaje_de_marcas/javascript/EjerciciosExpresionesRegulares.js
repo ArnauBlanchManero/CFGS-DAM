@@ -10,16 +10,21 @@ function exp1(){
     } else {
         solucion += fecha +" es inválido <br>";
     }
-    // let partesFecha=fecha.split(",");
-    // let day = parseInt(partesFecha[0]);
-    // let month = parseInt(partesFecha[1]);
-    // let year = parseInt(partesFecha[2]);
+    let partesFecha=fecha.split(",");
+    let day = parseInt(partesFecha[0]);
+    let month = parseInt(partesFecha[1]);
+    let year = parseInt(partesFecha[2]);
 
-    // let fechaIntroducida= new Date(day,month,year);
+    let fechaIntroducida= new Date(day,month,year);
+    let fechaActual = new Date();
+    solucion += fechaActual;
+    let diferencia = fechaActual - fechaIntroducida;
+    let diasTranscurridos = Math.floor(diferencia / (1000*60*60*24));
+    solucion += "Han pasado " + diasTranscurridos + " días desde la fecha ingresada. <br>";
 
     //Correo electrónico ejercicio 2
     let correo=document.getElementById("correo").value;
-    let expReg_correo=/^\w+@[A-Za-z]+.\w{2,}$/;
+    let expReg_correo=/^\w+@[A-Za-z]+.\w{2,3}$/;
     if(expReg_correo.test(correo)){
         solucion += correo +" es válido <br>";
     } else {
@@ -39,14 +44,10 @@ function exp1(){
     }    
     //Palabra ejemplo ejercicio 4
     let frase = document.getElementById("frase").value;
-    let expReg_palabra = /\pejemplo\p/;
-    let contador = 0;
-    for (let palabra of frase) {
-        if (expReg_palabra.test(palabra)) {
-            contador++;
-        }
-    }
-    solucion += "La palabra "+frase+" aparece "+contador+ " veces. <br>";
+    let palabra = "hola";
+    let partes = frase.split(palabra);
+    solucion += "La palabra "+palabra+" aparece "+partes.length()+ " veces. <br>";
+    
 
     //Palabra ipsum ejercicio 5
     let palabraReemplazar = document.getElementById("reemplazar").value;
@@ -58,7 +59,7 @@ function exp1(){
 
     //Contraseña ejercicio 6
     let contrasena = document.getElementById("contrasena").value;
-    let expReg_contrasena = /^[A-Z0-9a-z]*$/;
+    let expReg_contrasena = /^[[A-Z]+[0-9]+[a-z]+]*$/;
     //let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
     if(expReg_contrasena.test(contrasena)){
         solucion += "Contraseña válida <br>";

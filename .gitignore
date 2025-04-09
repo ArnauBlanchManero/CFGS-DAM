@@ -10,3 +10,6 @@
 
 # Excluir archivos de datos alterno que Windows suele agregar cuando se descargan archivos de internet
 *Zone.Identifier
+
+# Excluir ejecutables de java
+*.class

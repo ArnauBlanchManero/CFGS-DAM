@@ -9,8 +9,10 @@ function cambiarFondo(){
 
 function load(){
     let boton= document.querySelector("button");
+    let cuadroTexto = document.getElementsByName("texto").value;
+    
     boton.addEventListener("mousedown", cambiarFondo, false);
-
+    cuadroTexto.addEventListener("keydown", )
 }
 
 window.addEventListener("DOMContentLoaded", load, false);

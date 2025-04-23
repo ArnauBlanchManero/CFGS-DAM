@@ -5,11 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="eventos.js"></script>
+    <style>
+        #zona{
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h1>eventos</h1>
-    <button>cambiar color</button>
+    <h1>1. Cambiar color</h1>
+    <button>Cambiar color</button>
     <br>
-    <input type="text" name="texto">
+    <h1>2. Escribir cuadro de texto</h1>
+    <input type="text" name="texto" id="escribe">
+    <p id="textoSalida"></p>
+    <br>
+    <h1>3. Capturar los eventos </h1>
+    <button id="boton3">generar evento</button>
+    <br>
+    <h1>4. Capturar las cordenadas </h1>
+    <div id="zona">Pasa por aqui el raton</div>
+    <div id="coordenada"></div>
+    <br>
+    <h1>5. Datos formulario </h1>
+    <form method="post" id="Formulario">
+        <p>Nombre:</p><input type="text" id="Nombre">
+        <!-- <input type="submit" value="enviar"> -->
+         <button>Enviar</button>
+    </form>
+    <div id="resultado"></div>
+    <br>
 </body>
 </html>

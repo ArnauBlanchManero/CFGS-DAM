@@ -91,4 +91,24 @@ body {
   div.solucion:hover {
     background: rgba(102, 252, 241, 0.1);
   }
-  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+  }
+tr {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #444;
+  }
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+  }

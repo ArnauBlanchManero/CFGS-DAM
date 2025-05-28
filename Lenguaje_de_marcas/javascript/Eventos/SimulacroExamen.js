@@ -1,6 +1,7 @@
 let matriz = [[0,0,0],[0,0,0],[0,0,0]];
 let numeroAdivinar = 0;
 let dinero = 10;
+let puntos = [0,0];
 function random(num){
     return Math.floor(Math.random()*(num+1));
 }
@@ -219,7 +220,7 @@ function mostrarMapa(mapa){
                     document.getElementById(letras[j]+i+mapa).innerHTML = "X";
                     break;
                 case '2':
-                    document.getElementById(letras[j]+i+mapa).innerHTML = "*";
+                    document.getElementById(letras[j]+i+mapa).innerHTML = "~";
                     break;
                 default:
                     document.getElementById(letras[j]+i+mapa).innerHTML = "?";
@@ -276,10 +277,35 @@ function comprobarBarco(event){
         document.getElementById(id).innerHTML = "X";
         document.getElementById(id).disabled = true;
         document.getElementById(id).value = 0;
-    } else if(valor == 0){
+        puntos[0]++;
+    } else{
         document.getElementById(id).innerHTML = "O";
         document.getElementById(id).disabled = true;
         document.getElementById(id).value = 0;
+    }
+    if(puntos[0] == 20){
+        alert("Has ganado");
+    } else {
+        atacaOponente();
+    }
+}
+
+function atacaOponente(){
+    let letras = ['A','B','C','D','E','F','G','H','I','J'];
+    let celdaRandom;
+    do {
+        celdaRandom = "";
+        celdaRandom += letras[random(9)] + random(9) + 'p';
+        console.log("Celda random: "+celdaRandom);
+   } while (document.getElementById(celdaRandom).value == 3);
+   document.getElementById(celdaRandom).value = 3;
+   document.getElementById(celdaRandom).style.backgroundColor = "red";
+   if(document.getElementById(celdaRandom).value == 1){
+        puntos[1]++;
+   }
+   if(puntos[1] == 20){
+        alert("Has perdido");
+        mostrarMapa('o');
     }
 }
 
@@ -289,6 +315,9 @@ function empezar_ej2(){
     crearMapa("mapaOponente");
     crearMapa("mapaJugador");
 }
+
+// Cache the result of document.querySelectorAll(".boton2") outside the load function
+let cachedCeldas = document.querySelectorAll(".boton2");
 
 function load(){
     let empezar1 = document.getElementById("start1");
@@ -300,8 +329,12 @@ function load(){
 
     let empezar2 = document.getElementById("start2");
     empezar2.addEventListener("click", empezar_ej2);
-    let celdas = document.querySelectorAll(".boton2");
-    celdas.forEach(celda=>celda.addEventListener("click", comprobarBarco));
+    cachedCeldas.forEach(celda=>celda.addEventListener("click", comprobarBarco));
+    document.body.addEventListener("click", function(event) {
+        if (event.target.classList.contains("boton2")) {
+            comprobarBarco(event);
+        }
+    });
 }
 
 window.addEventListener("DOMContentLoaded", load);
